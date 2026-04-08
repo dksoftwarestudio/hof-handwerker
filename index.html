@@ -225,7 +225,7 @@ body{
   gap:12px;
   flex-wrap:wrap;
   align-items:center;
-  margin-top:24px; /* ← ДОБАВЬ ЭТУ СТРОКУ */
+  margin-top:24px;
 }
 
 .btn{
@@ -330,6 +330,31 @@ body{
   padding-left:18px;
   color:var(--muted);
   line-height:1.8;
+}
+
+/* RECOMMENDED SPECIALIST */
+.recommend-card{
+  background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border:1px solid rgba(26,83,173,0.12);
+}
+
+.recommend-label{
+  display:inline-block;
+  margin-bottom:12px;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(26,83,173,0.08);
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:0.3px;
+}
+
+.external-note{
+  margin-top:14px;
+  font-size:12px;
+  color:#8a8a8a;
+  line-height:1.5;
 }
 
 /* REQUEST BOARD */
@@ -831,6 +856,44 @@ footer a:hover{
     </div>
   </div>
 
+  <div class="section">
+    <div class="section-title">Empfohlene Spezialisten</div>
+
+    <div class="cards">
+      <div class="card recommend-card reveal">
+        <div class="card-inner">
+          <div class="recommend-label">Empfohlen</div>
+
+          <h3 class="standard-title">Schimmel-Experte in Hof</h3>
+
+          <p class="desc">
+            Fachgerechte Analyse und gezielte Beseitigung von Schimmel in Hof und Umgebung.
+            Geeignet für Wohnungen, Häuser und Innenräume mit Feuchtigkeits- oder Schimmelproblemen.
+          </p>
+
+          <div class="meta">
+            <span>Schimmelanalyse</span>
+            <span>Gezielte Beseitigung</span>
+            <span>Hof (Saale)</span>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn primary"
+               href="https://www.kleinanzeigen.de/s-anzeige/schimmel-experte-hof-fachgerechte-analyse-gezielte-beseitigung/3368963811-239-7246?utm_source=sharesheet&utm_medium=social&utm_campaign=socialbuttons&utm_content=app_android"
+               target="_blank"
+               rel="noopener">
+              Anzeige ansehen
+            </a>
+          </div>
+
+          <div class="external-note">
+            Externe Anzeige (Kleinanzeigen). Wir stellen nur den Kontakt her und übernehmen keine Haftung für externe Inhalte.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section id="request" class="request-board reveal">
     <div class="request-board-card">
       <div class="request-head">
@@ -871,6 +934,7 @@ footer a:hover{
                   <option value="Malerarbeiten">Malerarbeiten</option>
                   <option value="Renovierung">Renovierung</option>
                   <option value="Hausmeisterservice">Hausmeisterservice</option>
+                  <option value="Schimmel / Feuchtigkeit">Schimmel / Feuchtigkeit</option>
                   <option value="Sonstiges">Sonstiges</option>
                 </select>
               </div>
