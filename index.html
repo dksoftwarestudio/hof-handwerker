@@ -1386,10 +1386,23 @@ footer a:hover{
 
   <div class="cards">
     <div class="card premium-card reveal">
-      <div class="premium-top"
-           style="background:
-             linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)),
-             url('renovacio-bad.jpg') center / cover no-repeat;">
+
+      <!-- 🔥 TOP SPLIT: фото + карта -->
+      <div class="premium-top-split">
+
+        <div class="premium-photo">
+          <img src="renovacio-bad.jpg"
+               alt="Renovacio Handwerker Hof"
+               class="provider-photo">
+        </div>
+
+        <div class="premium-map">
+          <iframe
+            src="https://maps.google.com/maps?q=Westendstr.%2015,%2095145%20Oberkotzau&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy">
+          </iframe>
+        </div>
+
       </div>
 
       <div class="card-inner">
@@ -1416,7 +1429,9 @@ footer a:hover{
           ✔ Direkter Kontakt · ✔ Privat &amp; Gewerbe · ✔ Region Hof
         </div>
 
+        <!-- 🔥 КНОПКИ -->
         <div class="btn-row">
+
           <a class="btn primary"
              href="https://renovacio.de"
              target="_blank"
@@ -1440,8 +1455,17 @@ footer a:hover{
              href="mailto:sergeyin21@gmail.com">
             E-Mail
           </a>
+
+          <a class="btn secondary"
+             href="https://www.google.com/maps/search/?api=1&query=Westendstr.%2015,%2095145%20Oberkotzau"
+             target="_blank"
+             rel="noopener">
+            Standort öffnen
+          </a>
+
         </div>
       </div>
+
     </div>
   </div>
 </div>
