@@ -961,6 +961,7 @@ footer a:hover{
   .logo{
     justify-content:flex-start;
     gap:10px;
+    min-width:0;
   }
 
   .logo span{
@@ -973,8 +974,11 @@ footer a:hover{
   }
 
   .header-right{
+    display:flex;
     justify-content:flex-end;
+    align-items:center;
     margin-top:0;
+    flex-shrink:0;
   }
 
   .header-right .btn,
@@ -989,7 +993,24 @@ footer a:hover{
   .logo-mark{
     width:34px;
     height:34px;
-    flex-basis:34px;
+    flex:0 0 34px;
+  }
+
+  .main-content{
+    width:100%;
+  }
+
+  .usp-grid,
+  .trust-row,
+  .advantage-grid,
+  .compare-grid,
+  .pricing-grid,
+  .steps,
+  .columns,
+  .services-grid,
+  .request-layout,
+  .request-grid{
+    grid-template-columns:1fr;
   }
 
   .premium-top-split{
