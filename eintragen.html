@@ -310,6 +310,40 @@ body{
     center/cover no-repeat;
 }
 
+  .preview-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:220px;
+}
+
+.preview-photo{
+  min-width:0;
+}
+
+.preview-photo-img{
+  width:100%;
+  height:100%;
+  min-height:220px;
+  display:block;
+  object-fit:cover;
+  object-position:center 30%;
+  border-top-left-radius:18px;
+}
+
+.preview-map{
+  min-width:0;
+  background:#f3f6fb;
+}
+
+.preview-map iframe{
+  width:100%;
+  height:100%;
+  min-height:220px;
+  border:0;
+  display:block;
+  border-top-right-radius:18px;
+}
+
 .preview-inner{
   padding:20px;
 }
@@ -583,6 +617,19 @@ footer a:hover{
     padding: 20px 15px 50px;
   }
 
+  .preview-split{
+  display:block;
+}
+
+.preview-map{
+  display:none;
+}
+
+.preview-photo-img{
+  min-height:150px;
+  border-top-right-radius:18px;
+}
+
   /* Grid-Systeme auf einspaltig umstellen */
   .usp-grid,
   .trust-row,
@@ -818,42 +865,22 @@ footer a:hover{
     </p>
 
     <div class="preview-example">
-      <div class="preview-top"></div>
+     <div class="preview-split">
+  <div class="preview-photo">
+    <img
+      src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80"
+      alt="Beispiel Handwerk"
+      class="preview-photo-img">
+  </div>
 
-      <div class="preview-inner">
-        <div class="preview-badge">Empfohlen</div>
-
-        <h3 class="preview-title">Muster Handwerk Hof</h3>
-
-        <p class="preview-desc">
-          Zuverlässiger Handwerksbetrieb in Hof und Umgebung.
-          Unterstützung bei Reparaturen, Renovierung und Hausservice für Privat- und Gewerbekunden.
-        </p>
-
-        <div class="preview-meta">
-          <span>Reparaturen</span>
-          <span>Renovierung</span>
-          <span>Privat &amp; Gewerbe</span>
-        </div>
-
-        <!-- 🔥 КНОПКИ -->
-        <div class="btn-row" style="margin-top:16px;">
-          <a class="btn primary" href="javascript:void(0)">Kontakt per E-Mail</a>
-          <a class="btn secondary" href="javascript:void(0)">📞 Anrufen</a>
-          <a class="btn whatsapp" href="javascript:void(0)">WhatsApp</a>
-        </div>
-
-        <!-- доверие -->
-        <div style="margin:10px 0 6px; font-size:14px; color:#555;">
-          ✔ Versichert · ✔ Antwort &lt; 24h · ✔ Flexible Termine
-        </div>
-
-        <!-- подпись -->
-        <p style="margin-top:10px; font-size:12px; color:#777;">
-          Beispielhafte Darstellung eines Profils
-        </p>
-      </div>
-    </div>
+  <div class="preview-map">
+    <iframe
+      src="https://www.google.com/maps?q=Hof,+Germany&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
   </div>
 </div>
 
