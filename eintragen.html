@@ -228,18 +228,27 @@
 
 <footer class="bg-gray-900 text-gray-400 py-16">
   <div class="tail-container px-6">
-    <div class="grid md:grid-cols-4 gap-10">
+    <div class="grid md:grid-cols-5 gap-10">
 
+      <!-- Бренд -->
       <div>
         <a href="index.html" class="flex items-center gap-3 text-white mb-6">
           <img src="logo-handwerker.png"
                alt="hof-handwerker Logo"
-               class="w-9 h-9 rounded-2xl object-cover">
-          <span class="text-2xl font-bold">hof-handwerker.de</span>
+               class="w-10 h-10 rounded-2xl object-cover">
+
+          <div class="leading-tight">
+            <span class="text-xl font-bold">hof-handwerker.de</span>
+            <p class="text-xs text-gray-400 -mt-1">Hof (Saale)</p>
+          </div>
         </a>
-        <p class="text-sm">Lokale Plattform für Handwerker in Hof (Saale) und Umgebung.</p>
+
+        <p class="text-sm">
+          Lokale Plattform für Handwerker in Hof (Saale) und Umgebung.
+        </p>
       </div>
 
+      <!-- Navigation -->
       <div>
         <h5 class="font-semibold text-white mb-4">Navigation</h5>
         <ul class="space-y-2 text-sm">
@@ -249,6 +258,53 @@
         </ul>
       </div>
 
+      <!-- Partner Seiten -->
+      <div>
+        <h5 class="font-semibold text-white mb-4">Partner Seiten</h5>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="https://hof-reinigung.de"
+               target="_blank"
+               class="text-blue-400 hover:text-blue-300 transition">
+              hof-reinigung.de
+            </a>
+          </li>
+          <li>
+            <a href="https://hof-gartenservice.de"
+               target="_blank"
+               class="text-green-400 hover:text-green-300 transition">
+              hof-gartenservice.de
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Контакт -->
+      <div>
+        <h5 class="font-semibold text-white mb-4">Kontakt</h5>
+
+        <p class="text-sm mb-2">
+          WhatsApp:
+          <a href="https://wa.me/491624012037"
+             class="text-orange-400 hover:text-orange-300 transition">
+            +49 162 4012037
+          </a>
+        </p>
+
+        <p class="text-sm mb-2">
+          E-Mail:
+          <a href="mailto:info@hof-handwerker.de"
+             class="text-orange-400 hover:text-orange-300 transition">
+            info@hof-handwerker.de
+          </a>
+        </p>
+
+        <p class="text-sm mt-4 text-gray-500">
+          Made with ❤️ in Hof
+        </p>
+      </div>
+
+      <!-- Право -->
       <div>
         <h5 class="font-semibold text-white mb-4">Rechtliches</h5>
         <ul class="space-y-2 text-sm">
@@ -257,73 +313,10 @@
         </ul>
       </div>
 
-     <div>
-  <h5 class="font-semibold text-white mb-4">Kontakt</h5>
-  
-  <p class="text-sm mb-2">
-    WhatsApp: 
-    <a href="https://wa.me/491624012037" class="text-orange-400 hover:text-orange-300 transition">
-      +49 162 4012037
-    </a>
-  </p>
-  
-  <p class="text-sm mb-2">
-    E-Mail: 
-    <a href="mailto:info@hof-handwerker.de" class="text-orange-400 hover:text-orange-300 transition">
-      info@hof-handwerker.de
-    </a>
-  </p>
-  
-  <p class="text-sm mt-4 text-gray-400">Made with ❤️ in Hof</p>
-</div>
-
     </div>
 
     <div class="text-center text-xs mt-16 border-t border-gray-800 pt-8">
-      © 2026 hof-handwerker.de – Ein regionales Projekt
+      © 2026 hof-handwerker.de
     </div>
   </div>
 </footer>
-
-<script>
-  tailwind.config = {
-    content: [],
-    theme: { extend: {} }
-  }
-
-  const form = document.getElementById('company-form');
-  const statusDiv = document.getElementById('form-status');
-
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      statusDiv.classList.add('hidden');
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          statusDiv.className = 'mt-6 text-center text-orange-600 font-medium';
-          statusDiv.textContent = '✅ Vielen Dank! Wir melden uns schnellstmöglich bei Ihnen.';
-          statusDiv.classList.remove('hidden');
-          form.reset();
-        } else {
-          throw new Error();
-        }
-      } catch (error) {
-        statusDiv.className = 'mt-6 text-center text-red-600 font-medium';
-        statusDiv.textContent = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns per WhatsApp.';
-        statusDiv.classList.remove('hidden');
-      }
-    });
-  }
-</script>
-
-</body>
-</html>
