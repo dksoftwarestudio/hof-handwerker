@@ -22,6 +22,25 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
   </style>
 </head>
 
@@ -83,11 +102,11 @@
   <div class="tail-container px-6">
     <div class="max-w-3xl">
       <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-  Handwerker in Hof –<br>
-  <span class="text-orange-300">
-    lokal und zuverlässig
-  </span>
-</h1>
+        Handwerker in Hof –<br>
+        <span class="text-orange-300">
+          lokal und zuverlässig
+        </span>
+      </h1>
 
       <p class="text-xl md:text-2xl mb-10 text-orange-50">
         Wir verbinden Sie mit Handwerksbetrieben aus Hof und Umgebung.<br>
@@ -133,8 +152,7 @@
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      <!-- Renovacio -->
-      <div class="bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:shadow-lg transition">
+      <div class="reveal bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:shadow-lg transition">
         <div class="relative h-52">
           <img src="renovacio-bad.jpg"
                alt="Renovacio Hof"
@@ -176,8 +194,7 @@
         </div>
       </div>
 
-      <!-- Platzhalter 1 -->
-      <div class="bg-white rounded-3xl border-2 border-dashed border-zinc-300 flex flex-col items-center justify-center text-center p-8">
+      <div class="reveal bg-white rounded-3xl border-2 border-dashed border-zinc-300 flex flex-col items-center justify-center text-center p-8">
         <div class="text-4xl mb-4">🏢</div>
 
         <h4 class="font-semibold text-lg mb-2">
@@ -194,8 +211,7 @@
         </a>
       </div>
 
-      <!-- Platzhalter 2 -->
-      <div class="bg-white rounded-3xl border-2 border-dashed border-zinc-300 flex flex-col items-center justify-center text-center p-8">
+      <div class="reveal bg-white rounded-3xl border-2 border-dashed border-zinc-300 flex flex-col items-center justify-center text-center p-8">
         <div class="text-4xl mb-4">🏗️</div>
 
         <h4 class="font-semibold text-lg mb-2">
@@ -229,32 +245,32 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Sanitär & Heizung</h3>
         <p class="text-sm text-zinc-600">Für Reparaturen, Austausch und kleinere Installationen.</p>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Elektroarbeiten</h3>
         <p class="text-sm text-zinc-600">Für Steckdosen, Lampen, Anschlüsse und kleinere Elektroarbeiten.</p>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Malerarbeiten</h3>
         <p class="text-sm text-zinc-600">Für Streichen, Tapezieren und Renovierungen.</p>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Trockenbau & Innenausbau</h3>
         <p class="text-sm text-zinc-600">Für kleinere Umbauten und Arbeiten im Innenbereich.</p>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Garten & Außenbereich</h3>
         <p class="text-sm text-zinc-600">Für Arbeiten rund um Garten, Hof und Außenflächen.</p>
       </div>
 
-      <div class="bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 transition hover:-translate-y-1 hover:shadow-md">
         <h3 class="font-semibold text-xl mb-2">Fenster & Türen</h3>
         <p class="text-sm text-zinc-600">Für Reparatur, Austausch und Montageanfragen.</p>
       </div>
@@ -276,19 +292,19 @@
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
         <div class="text-5xl mb-4">📍</div>
         <h4 class="font-semibold text-xl mb-2">Regional</h4>
         <p class="text-zinc-600">Fokus auf Hof und Umgebung.</p>
       </div>
 
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
         <div class="text-5xl mb-4">⚡</div>
         <h4 class="font-semibold text-xl mb-2">Einfach</h4>
         <p class="text-zinc-600">Eine Anfrage statt viele einzelne Telefonate.</p>
       </div>
 
-      <div class="bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-sm">
         <div class="text-5xl mb-4">🤝</div>
         <h4 class="font-semibold text-xl mb-2">Direkt</h4>
         <p class="text-zinc-600">Kein Callcenter und keine komplizierten Prozesse.</p>
@@ -436,6 +452,25 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    items.forEach(item => observer.observe(item));
+  });
+</script>
 
 </body>
 </html>
