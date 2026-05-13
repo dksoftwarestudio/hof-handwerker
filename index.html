@@ -214,48 +214,71 @@
         </div>
       </div>
 
-      <div class="bg-white rounded-3xl border border-zinc-100 overflow-hidden shadow-sm hover:shadow-xl transition">
+      <div class="reveal bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
 
-  <div class="h-52 overflow-hidden">
+  <div class="relative h-52">
     <img src="ami-hausmeister.jpg"
          alt="AMI Hausmeister Hof"
          class="w-full h-full object-cover">
+
+    <div class="absolute top-3 left-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+      Empfohlen in Hof
+    </div>
   </div>
 
-  <div class="p-7">
+  <div class="p-6 flex flex-col flex-1">
 
-    <div class="flex items-center gap-2 mb-3">
-      <span class="bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full">
-        Entrümpelung
-      </span>
-
-      <span class="bg-zinc-100 text-zinc-600 text-xs font-semibold px-3 py-1 rounded-full">
-        Hof
-      </span>
-    </div>
-
-    <h3 class="text-2xl font-bold text-zinc-900 mb-3">
+    <h4 class="font-bold text-2xl text-zinc-800 mb-3">
       AMI Hausmeister
-    </h3>
+    </h4>
 
-    <p class="text-zinc-600 text-sm leading-relaxed mb-6">
-      Entrümpelung, Haushaltsauflösungen, Kleintransporte und Hausmeisterservice in Hof und Umgebung.
-      Direkter Kontakt per Telefon oder WhatsApp.
+    <p class="text-[#1A53AD] text-sm font-medium mb-3 leading-relaxed">
+      Entrümpelung • Haushaltsauflösungen • Kleintransporte • Hausmeisterservice
     </p>
 
-    <div class="flex flex-col gap-3">
+    <div class="flex items-center gap-2 text-sm mb-5">
+      <span class="text-yellow-500">★ ★ ★ ★ ★</span>
+      <span class="text-zinc-600">5,0 bei Google</span>
+    </div>
 
+    <p class="text-zinc-600 text-sm leading-7 mb-6">
+      Entrümpelungen, Haushaltsauflösungen und Hausmeisterservice
+      in Hof und Umgebung. Zuverlässig, schnell und stressfrei.
+    </p>
+
+    <div class="space-y-3 text-sm mb-6">
+      <div class="flex items-center gap-3 text-zinc-700">
+        <span>📍</span>
+        <span>95028 Hof</span>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span>📞</span>
+        <a href="tel:+4915203110437"
+           class="text-[#1A53AD] hover:underline">
+          01520 3110437
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span>✉️</span>
+        <a href="mailto:ami.hausmeister@gmail.com"
+           class="text-[#1A53AD] hover:underline break-all">
+          ami.hausmeister@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <div class="flex gap-3 mt-auto">
       <a href="tel:+4915203110437"
-         class="bg-[#1A53AD] text-white text-center py-3 rounded-2xl font-semibold hover:bg-[#163E82] transition">
+         class="flex-1 text-center bg-[#1A53AD] text-white py-3 rounded-2xl text-sm font-medium hover:bg-[#163E82] transition">
         Anrufen
       </a>
 
-      <a href="https://wa.me/4915203110437"
-         target="_blank"
-         class="border border-zinc-200 text-zinc-700 text-center py-3 rounded-2xl font-medium hover:bg-zinc-50 transition">
-        WhatsApp
+      <a href="mailto:ami.hausmeister@gmail.com"
+         class="flex-1 text-center border border-zinc-300 py-3 rounded-2xl text-sm font-medium text-zinc-700 hover:bg-zinc-100 transition">
+        E-Mail
       </a>
-
     </div>
 
   </div>
