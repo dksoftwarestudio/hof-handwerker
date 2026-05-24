@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hof-handwerker.de | Handwerker in Hof - lokal &amp; zuverlässig</title>
-  <meta name="description" content="Handwerker in Hof finden - regionale Betriebe für Renovierung, Sanierung, Reparaturen, Innenausbau, Montage und weitere Handwerksarbeiten. Kostenlos und unverbindlich anfragen.">
+  <title>hof-handwerker.de | Handwerker in Hof finden</title>
+  <meta name="description" content="Handwerker in Hof finden - kostenlose Anfrage für Renovierung, Sanierung, Reparaturen, Innenausbau, Montage und weitere Handwerksarbeiten. Anbieter aus Hof und Umgebung erhalten.">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     .hero-bg {
-      background-image: linear-gradient(rgba(24,24,27,0.34), rgba(24,24,27,0.54)),
+      background-color: #1f1308;
+      background-image: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.40)),
                         url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80');
       background-size: cover;
       background-position: center;
@@ -45,31 +46,31 @@
 
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
-<header class="bg-white/95 shadow-sm sticky top-0 z-50 backdrop-blur">
+<header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="tail-container px-6 py-4">
+
     <div class="flex items-center justify-between gap-6">
-      <a href="index.html" class="flex items-center gap-3 shrink-0" aria-label="hof-handwerker.de Startseite">
+      <a href="index.html" class="flex items-center gap-3 shrink-0">
         <img src="logo-handwerker.png"
              alt="hof-handwerker Logo"
-             class="w-12 h-12 rounded-2xl object-cover">
+             class="w-12 h-12 rounded-xl object-cover">
         <div>
-          <span class="block text-xl sm:text-2xl font-bold text-gray-900 leading-tight">hof-handwerker.de</span>
-          <p class="text-xs text-gray-500">Hof (Saale)</p>
+          <span class="text-2xl font-bold text-gray-800">hof-handwerker.de</span>
+          <p class="text-xs text-gray-500 -mt-1">Hof (Saale)</p>
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
-        <a href="index.html" class="text-orange-600 font-semibold">Start</a>
-        <a href="#firmen" class="hover:text-orange-600 transition">Anbieter</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
         <a href="#leistungen" class="hover:text-orange-600 transition">Leistungen</a>
-        <a href="eintragen.html" class="hover:text-orange-600 transition">Betrieb eintragen</a>
+        <a href="#firmen" class="text-orange-600 font-semibold">Handwerker</a>
+        <a href="eintragen.html" class="hover:text-orange-600 transition">Als Betrieb eintragen</a>
         <a href="kontakt.html" class="hover:text-orange-600 transition">Kontakt</a>
       </nav>
 
-      <div class="hidden md:flex items-center gap-3">
+      <div class="hidden md:flex items-center gap-4">
         <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
-           class="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-2xl font-medium transition">
-          <span>WhatsApp</span>
+           class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-2xl font-medium transition">
+          WhatsApp
         </a>
 
         <a href="#anfrage"
@@ -90,452 +91,604 @@
         Anfrage
       </a>
     </div>
+
   </div>
 </header>
 
-<main>
-  <section class="hero-bg min-h-[86vh] flex items-center text-white py-20">
-    <div class="tail-container px-6 w-full">
-      <div class="max-w-3xl">
-        <p class="inline-flex items-center gap-2 bg-white/14 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-semibold mb-6">
-          <span class="text-orange-300" aria-hidden="true">•</span>
-          Lokal in Hof und Umgebung
-        </p>
+<section class="hero-bg min-h-[82vh] md:min-h-screen flex items-center text-white py-20">
+  <div class="tail-container px-6">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6">
+        Handwerker in Hof finden
+        <span class="text-orange-300">
+          mit nur einer Anfrage.
+        </span>
+      </h1>
 
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6">
-          Handwerker in Hof schnell und unkompliziert finden
-        </h1>
+      <p class="text-lg sm:text-xl md:text-2xl mb-10 text-orange-50">
+        Beschreiben Sie kurz, welche Arbeit erledigt werden soll. Passende Betriebe aus Hof und Umgebung können sich direkt bei Ihnen melden.
+      </p>
 
-        <p class="text-lg md:text-2xl mb-9 text-orange-50 max-w-2xl leading-relaxed">
-          Eine Anfrage senden – passende regionale Betriebe können sich direkt bei Ihnen melden.
-        </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#anfrage"
+           class="bg-white hover:bg-orange-50 text-orange-600 text-lg sm:text-xl px-7 sm:px-10 py-4 sm:py-5 rounded-3xl font-semibold text-center transition">
+          Kostenlose Anfrage stellen
+        </a>
 
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#anfrage"
-             class="bg-white hover:bg-orange-50 text-orange-700 text-lg px-8 py-4 rounded-2xl font-semibold text-center transition">
-            Kostenlose Anfrage stellen
-          </a>
+        <a href="#firmen"
+           class="border-2 border-white hover:bg-white hover:text-orange-600 text-white text-lg sm:text-xl px-7 sm:px-10 py-4 sm:py-5 rounded-3xl font-semibold text-center transition">
+          Handwerker ansehen
+        </a>
+      </div>
 
-          <a href="#leistungen"
-             class="border-2 border-white hover:bg-white hover:text-orange-700 text-white text-lg px-8 py-4 rounded-2xl font-semibold text-center transition">
-            Leistungen ansehen
-          </a>
+      <div class="flex flex-wrap sm:grid sm:grid-cols-3 gap-3 mt-14 text-sm">
+        <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">
+          Regional aus Hof
         </div>
-
-        <div class="flex flex-wrap sm:grid sm:grid-cols-3 gap-3 mt-10 text-sm">
-          <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
-            Regional aus Hof
-          </div>
-          <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
-            Kostenlos &amp; unverbindlich
-          </div>
-          <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
-            Direkter Kontakt
-          </div>
+        <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">
+          Kostenlos &amp; unverbindlich
+        </div>
+        <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">
+          Keine Registrierung nötig
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="firmen" class="py-20 bg-white">
-    <div class="tail-container px-6">
-      <div class="max-w-3xl mx-auto text-center mb-12">
-        <p class="text-sm font-semibold text-orange-600 mb-3">Anbieter in Hof</p>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Ausgewählte Betriebe aus der Region
-        </h2>
+<section id="ablauf" class="py-20 bg-[#F5F5F5]">
+  <div class="tail-container px-6">
+
+    <h2 class="text-4xl font-semibold text-center mb-4">
+      So funktioniert es
+    </h2>
+
+    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-14">
+      Eine Anfrage reicht aus. Sie müssen nicht mehrere Betriebe einzeln kontaktieren.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-3xl font-bold">
+          1
+        </div>
+        <h3 class="font-semibold text-xl mb-3">Anfrage senden</h3>
         <p class="text-zinc-600">
-          Finden Sie lokale Ansprechpartner für Renovierung, Reparaturen, Innenausbau, Hausmeisterservice und verwandte Arbeiten.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <article class="reveal bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
-          <div class="relative h-52">
-            <img src="renovacio-bad.jpg"
-                 alt="Renovacio Hof"
-                 class="w-full h-full object-cover">
-
-            <div class="absolute top-3 left-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow">
-              Partner aus der Region
-            </div>
-          </div>
-
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-semibold text-2xl text-zinc-800 mb-3">Renovacio</h3>
-
-            <p class="text-orange-600 text-sm font-medium mb-3 leading-relaxed">
-              Renovierung | Sanierung | Innenausbau
-            </p>
-
-            <div class="flex items-center gap-2 text-sm mb-5">
-              <span class="text-green-600 font-medium">
-                ✓ Partner aus der Region
-              </span>
-            </div>
-
-            <p class="text-zinc-600 text-sm leading-7 mb-6">
-              Handwerksleistungen für Renovierung, Sanierung, Innenausbau und weitere Arbeiten in Hof und Umgebung.
-            </p>
-
-            <div class="space-y-3 text-sm mb-6">
-              <div class="flex items-start gap-3 text-zinc-700">
-                <span aria-hidden="true">📍</span>
-                <span>
-                  95145 Oberkotzau
-                </span>
-              </div>
-
-              <div class="flex items-center gap-3">
-                <span aria-hidden="true">📞</span>
-                <a href="tel:+491606805080"
-                   class="text-orange-600 hover:underline">
-                  +49 1606805080
-                </a>
-              </div>
-
-              <div class="flex items-center gap-3">
-                <span aria-hidden="true">✉️</span>
-                <a href="mailto:sergeyin21@gmail.com"
-                   class="text-orange-600 hover:underline break-all">
-                  sergeyin21@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div class="flex gap-3 mt-auto">
-              <a href="tel:+491606805080"
-                 class="flex-1 text-center bg-orange-600 text-white py-3 rounded-2xl text-sm font-medium hover:bg-orange-700 transition">
-                Anrufen
-              </a>
-
-              <a href="https://renovacio.de"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="flex-1 text-center border border-zinc-300 py-3 rounded-2xl text-sm font-medium text-zinc-700 hover:bg-zinc-100 transition">
-                Website
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="reveal bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
-          <div class="relative h-52">
-            <img src="IMG_2986.jpeg"
-                 alt="AMI Hausmeister Hof"
-                 class="w-full h-full object-cover">
-
-            <div class="absolute top-3 left-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow">
-              Partner aus der Region
-            </div>
-          </div>
-
-          <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-semibold text-2xl text-zinc-800 mb-3">
-              AMI Hausmeister
-            </h3>
-
-            <p class="text-orange-600 text-sm font-medium mb-3 leading-relaxed">
-              Entrümpelung | Haushaltsauflösungen | Kleintransporte | Hausmeisterservice
-            </p>
-
-            <div class="flex items-center gap-2 text-sm mb-5">
-              <span class="text-green-600 font-medium">
-                ✓ Partner aus der Region
-              </span>
-            </div>
-
-            <p class="text-zinc-600 text-sm leading-7 mb-6">
-              Entrümpelungen, Haushaltsauflösungen, Kleintransporte und Hausmeisterservice in Hof und Umgebung.
-            </p>
-
-            <div class="space-y-3 text-sm mb-6">
-              <div class="flex items-center gap-3 text-zinc-700">
-                <span aria-hidden="true">📍</span>
-                <span>95028 Hof</span>
-              </div>
-
-              <div class="flex items-center gap-3">
-                <span aria-hidden="true">📞</span>
-                <a href="tel:+4915203110437"
-                   class="text-orange-600 hover:underline">
-                  01520 3110437
-                </a>
-              </div>
-
-              <div class="flex items-center gap-3">
-                <span aria-hidden="true">✉️</span>
-                <a href="mailto:ami.hausmeister@gmail.com"
-                   class="text-orange-600 hover:underline break-all">
-                  ami.hausmeister@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div class="flex gap-3 mt-auto">
-              <a href="tel:+4915203110437"
-                 class="flex-1 text-center bg-orange-600 text-white py-3 rounded-2xl text-sm font-medium hover:bg-orange-700 transition">
-                Anrufen
-              </a>
-
-              <a href="mailto:ami.hausmeister@gmail.com"
-                 class="flex-1 text-center border border-zinc-300 py-3 rounded-2xl text-sm font-medium text-zinc-700 hover:bg-zinc-100 transition">
-                E-Mail
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="reveal bg-[#F8FAFC] rounded-3xl border-2 border-dashed border-zinc-300 flex flex-col items-center justify-center text-center p-8 min-h-[420px]">
-          <div class="w-14 h-14 rounded-3xl bg-orange-100 text-orange-600 flex items-center justify-center mb-5 text-2xl">
-            <span aria-hidden="true">+</span>
-          </div>
-
-          <h3 class="font-semibold text-lg mb-2">
-            Hier könnte Ihre Firma stehen
-          </h3>
-
-          <p class="text-sm text-zinc-500 mb-6">
-            Erhalten Sie direkte Anfragen aus Hof und Umgebung.
-          </p>
-
-          <a href="eintragen.html"
-             class="bg-orange-600 text-white px-6 py-3 rounded-2xl text-sm font-medium hover:bg-orange-700 transition">
-            Betrieb eintragen
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="leistungen" class="py-20 bg-[#F5F5F5]">
-    <div class="tail-container px-6">
-      <div class="max-w-3xl mx-auto text-center mb-12">
-        <p class="text-sm font-semibold text-orange-600 mb-3">Leistungen</p>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Für viele Arbeiten rund um Haus, Wohnung und Betrieb
-        </h2>
-        <p class="text-zinc-600">
-          Beschreiben Sie kurz Ihr Vorhaben. Wir leiten die Anfrage passend weiter oder stellen den direkten Kontakt her.
-        </p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm">
-          <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">🛠️</div>
-          <h3 class="font-semibold text-xl mb-2">Renovierung</h3>
-          <p class="text-zinc-600 text-sm leading-6">Malerarbeiten, Boden, Innenausbau, Modernisierung und kleinere Reparaturen.</p>
-        </div>
-
-        <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm">
-          <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">🔧</div>
-          <h3 class="font-semibold text-xl mb-2">Reparaturen</h3>
-          <p class="text-zinc-600 text-sm leading-6">Schnelle Hilfe bei Defekten, Montagearbeiten und handwerklichen Kleinarbeiten.</p>
-        </div>
-
-        <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm">
-          <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">🏠</div>
-          <h3 class="font-semibold text-xl mb-2">Innenausbau</h3>
-          <p class="text-zinc-600 text-sm leading-6">Trockenbau, Umbauten, Türen, Wand- und Raumarbeiten nach Bedarf.</p>
-        </div>
-
-        <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm">
-          <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">🚿</div>
-          <h3 class="font-semibold text-xl mb-2">Bad &amp; Sanitär</h3>
-          <p class="text-zinc-600 text-sm leading-6">Anfragen für Badrenovierung, Sanitärarbeiten und passende Fachbetriebe.</p>
-        </div>
-
-        <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm">
-          <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">📦</div>
-          <h3 class="font-semibold text-xl mb-2">Entrümpelung</h3>
-          <p class="text-zinc-600 text-sm leading-6">Haushaltsauflösungen, Kleintransporte und Unterstützung bei Räumungen.</p>
-        </div>
-
-        <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm">
-          <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">📋</div>
-          <h3 class="font-semibold text-xl mb-2">Sonstiges</h3>
-          <p class="text-zinc-600 text-sm leading-6">Nicht sicher, wer zuständig ist? Senden Sie die Anfrage mit kurzer Beschreibung.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-white">
-    <div class="tail-container px-6">
-      <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-start">
-        <div>
-          <p class="text-sm font-semibold text-orange-600 mb-3">So funktioniert es</p>
-          <h2 class="text-3xl md:text-4xl font-bold mb-5">
-            Eine klare Anfrage spart Zeit
-          </h2>
-          <p class="text-zinc-600 leading-7 mb-7">
-            Viele Betriebe sind stark ausgelastet. Je konkreter die Anfrage ist, desto schneller kann eingeschätzt werden, ob Termin, Umfang und Leistung passen.
-          </p>
-
-          <a href="#anfrage"
-             class="inline-flex items-center gap-2 bg-orange-600 text-white px-7 py-3 rounded-2xl font-semibold hover:bg-orange-700 transition">
-            Anfrage vorbereiten
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100">
-            <h3 class="font-semibold text-lg mb-4 text-green-700">
-              Hilfreich für Rückmeldung
-            </h3>
-
-            <ul class="space-y-3 text-sm text-zinc-700">
-              <li class="flex gap-3"><span class="text-green-600 mt-1" aria-hidden="true">✓</span><span>Kurze Beschreibung der Arbeit</span></li>
-              <li class="flex gap-3"><span class="text-green-600 mt-1" aria-hidden="true">✓</span><span>Ort oder Stadtteil in Hof</span></li>
-              <li class="flex gap-3"><span class="text-green-600 mt-1" aria-hidden="true">✓</span><span>Zeitraum, Dringlichkeit und Umfang</span></li>
-            </ul>
-          </div>
-
-          <div class="bg-[#F8FAFC] p-6 rounded-3xl border border-zinc-100">
-            <h3 class="font-semibold text-lg mb-4 text-red-600">
-              Erschwert die Einschätzung
-            </h3>
-
-            <ul class="space-y-3 text-sm text-zinc-700">
-              <li class="flex gap-3"><span class="text-red-500 mt-1" aria-hidden="true">×</span><span>Sehr allgemeine Angaben</span></li>
-              <li class="flex gap-3"><span class="text-red-500 mt-1" aria-hidden="true">×</span><span>Keine Information zum Umfang</span></li>
-              <li class="flex gap-3"><span class="text-red-500 mt-1" aria-hidden="true">×</span><span>Unklare Erreichbarkeit</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-[#F5F5F5]">
-    <div class="tail-container px-6">
-      <div class="max-w-3xl mx-auto text-center mb-12">
-        <p class="text-sm font-semibold text-orange-600 mb-3">Vorteile</p>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Warum über hof-handwerker.de?
-        </h2>
-        <p class="text-zinc-600">
-          Statt lange zu suchen, senden Sie eine Anfrage. Passende regionale Betriebe können sich direkt bei Ihnen melden.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="reveal bg-white p-8 rounded-3xl text-center border border-zinc-100 shadow-sm">
-          <div class="w-14 h-14 mx-auto rounded-3xl bg-orange-100 text-orange-600 flex items-center justify-center mb-5 text-2xl">
-            <span aria-hidden="true">01</span>
-          </div>
-          <h3 class="font-semibold text-xl mb-2">Regional</h3>
-          <p class="text-zinc-600">Fokus auf Hof und Umgebung.</p>
-        </div>
-
-        <div class="reveal bg-white p-8 rounded-3xl text-center border border-zinc-100 shadow-sm">
-          <div class="w-14 h-14 mx-auto rounded-3xl bg-orange-100 text-orange-600 flex items-center justify-center mb-5 text-2xl">
-            <span aria-hidden="true">02</span>
-          </div>
-          <h3 class="font-semibold text-xl mb-2">Einfach</h3>
-          <p class="text-zinc-600">Eine Anfrage statt viele einzelne Telefonate.</p>
-        </div>
-
-        <div class="reveal bg-white p-8 rounded-3xl text-center border border-zinc-100 shadow-sm">
-          <div class="w-14 h-14 mx-auto rounded-3xl bg-orange-100 text-orange-600 flex items-center justify-center mb-5 text-2xl">
-            <span aria-hidden="true">03</span>
-          </div>
-          <h3 class="font-semibold text-xl mb-2">Direkt</h3>
-          <p class="text-zinc-600">Kein komplizierter Prozess und keine Abo-Pflicht.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="anfrage" class="py-20 bg-orange-600 text-white">
-    <div class="tail-container px-6 max-w-3xl mx-auto">
-      <div class="text-center mb-10">
-        <p class="text-sm font-semibold text-orange-100 mb-3">Kostenlos &amp; unverbindlich</p>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Jetzt Anfrage stellen
-        </h2>
-        <p class="text-orange-100">
           Beschreiben Sie kurz, welche Handwerksarbeit Sie benötigen.
         </p>
       </div>
 
-      <div class="bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
-        <form action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-5">
-          <input type="hidden" name="_redirect" value="https://hof-handwerker.de/danke.html">
-          <input type="hidden" name="source" value="hof-handwerker.de">
+      <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-3xl font-bold">
+          2
+        </div>
+        <h3 class="font-semibold text-xl mb-3">Betriebe prüfen</h3>
+        <p class="text-zinc-600">
+          Ihre Anfrage wird an passende Anbieter aus Hof und Umgebung weitergeleitet.
+        </p>
+      </div>
 
-          <div class="grid md:grid-cols-2 gap-5">
-            <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
-                   class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600">
+      <div class="reveal bg-white rounded-3xl p-8 text-center border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-3xl font-bold">
+          3
+        </div>
+        <h3 class="font-semibold text-xl mb-3">Rückmeldung erhalten</h3>
+        <p class="text-zinc-600">
+          Ein passender Betrieb kann sich direkt bei Ihnen melden.
+        </p>
+      </div>
 
-            <input type="tel" name="phone" placeholder="Telefonnummer" required inputmode="tel" autocomplete="tel"
-                   class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600">
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="#anfrage"
+         class="inline-block bg-[#D95F02] text-white px-8 py-3 rounded-2xl font-semibold hover:bg-[#B94E00] transition">
+        Jetzt kostenlos anfragen
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section id="leistungen" class="py-20 bg-white">
+  <div class="tail-container px-6">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <p class="text-sm font-semibold text-orange-600 mb-3">Leistungen</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Für viele Arbeiten rund um Haus, Wohnung und Betrieb
+      </h2>
+      <p class="text-zinc-600">
+        Beschreiben Sie kurz Ihren Bedarf. Wir leiten die Anfrage passend weiter oder stellen den direkten Kontakt her.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">🛠️</div>
+        <h3 class="font-semibold text-xl mb-2">Renovierung</h3>
+        <p class="text-zinc-600 text-sm leading-6">Malerarbeiten, Boden, Innenausbau, Modernisierung und kleinere Reparaturen.</p>
+      </div>
+
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">🔧</div>
+        <h3 class="font-semibold text-xl mb-2">Reparaturen</h3>
+        <p class="text-zinc-600 text-sm leading-6">Schnelle Hilfe bei Defekten, Montagearbeiten und handwerklichen Kleinarbeiten.</p>
+      </div>
+
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">🏠</div>
+        <h3 class="font-semibold text-xl mb-2">Innenausbau</h3>
+        <p class="text-zinc-600 text-sm leading-6">Trockenbau, Umbauten, Türen, Wand- und Raumarbeiten nach Bedarf.</p>
+      </div>
+
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">🚿</div>
+        <h3 class="font-semibold text-xl mb-2">Bad &amp; Sanitär</h3>
+        <p class="text-zinc-600 text-sm leading-6">Anfragen für Badrenovierung, Sanitärarbeiten und passende Fachbetriebe.</p>
+      </div>
+
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">📦</div>
+        <h3 class="font-semibold text-xl mb-2">Entrümpelung</h3>
+        <p class="text-zinc-600 text-sm leading-6">Haushaltsauflösungen, Kleintransporte und Unterstützung bei Räumungen.</p>
+      </div>
+
+      <div class="reveal bg-white p-7 rounded-3xl border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300">
+        <div class="text-3xl text-orange-600 mb-5" aria-hidden="true">📋</div>
+        <h3 class="font-semibold text-xl mb-2">Sonstiges</h3>
+        <p class="text-zinc-600 text-sm leading-6">Nicht sicher, wer zuständig ist? Senden Sie die Anfrage mit kurzer Beschreibung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="firmen" class="py-20 bg-white">
+  <div class="tail-container px-6">
+
+    <h2 class="text-4xl font-semibold text-center mb-4">
+      Handwerker in Hof
+    </h2>
+
+    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-14">
+      Ausgewählte Anbieter aus Hof und Umgebung. Kontaktieren Sie die Betriebe direkt oder stellen Sie eine Anfrage.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="reveal bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+
+        <div class="relative h-52">
+          <img src="renovacio-bad.jpg"
+               alt="Renovacio Hof"
+               class="w-full h-full object-cover">
+
+          <div class="absolute top-3 left-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+            Partner aus der Region
+          </div>
+        </div>
+
+        <div class="p-6 flex flex-col flex-1">
+
+          <h4 class="font-semibold text-2xl text-zinc-800 mb-3">
+            Renovacio
+          </h4>
+
+          <p class="text-[#D95F02] text-sm font-medium mb-3 leading-relaxed">
+            Renovierung • Sanierung • Innenausbau
+          </p>
+
+          <div class="flex items-center gap-2 text-sm mb-5">
+            <span class="text-green-600 font-medium">
+              ✓ Partner aus der Region
+            </span>
           </div>
 
-          <input type="email" name="email" placeholder="E-Mail (optional)" inputmode="email" autocomplete="email"
+          <p class="text-zinc-600 text-sm leading-7 mb-6">
+            Handwerksleistungen für Renovierung, Sanierung, Innenausbau und weitere Arbeiten in Hof und Umgebung.
+          </p>
+
+          <div class="space-y-3 text-sm mb-6">
+            <div class="flex items-start gap-3 text-zinc-700">
+              <span>📍</span>
+              <span>Westendstr. 15<br>95145 Oberkotzau</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span>📞</span>
+              <a href="tel:+491606805080"
+                 class="text-[#D95F02] hover:underline">
+                +49 1606805080
+              </a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span>✉️</span>
+              <a href="mailto:sergeyin21@gmail.com"
+                 class="text-[#D95F02] hover:underline break-all">
+                sergeyin21@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="flex gap-3 mt-auto">
+            <a href="tel:+491606805080"
+               class="flex-1 text-center bg-[#D95F02] text-white py-3 rounded-2xl text-sm font-medium hover:bg-[#B94E00] transition">
+              Anrufen
+            </a>
+
+            <a href="https://renovacio.de"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="flex-1 text-center border border-zinc-300 py-3 rounded-2xl text-sm font-medium text-zinc-700 hover:bg-zinc-100 transition">
+              Website
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="reveal bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+
+        <div class="relative h-52">
+          <img src="IMG_2986.jpeg"
+               alt="AMI Hausmeister Hof"
+               class="w-full h-full object-cover">
+
+          <div class="absolute top-3 left-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+            Partner aus der Region
+          </div>
+        </div>
+
+        <div class="p-6 flex flex-col flex-1">
+
+          <h4 class="font-semibold text-2xl text-zinc-800 mb-3">
+            AMI Hausmeister
+          </h4>
+
+          <p class="text-[#D95F02] text-sm font-medium mb-3 leading-relaxed">
+            Entrümpelung • Haushaltsauflösungen • Hausmeisterservice
+          </p>
+
+          <div class="flex items-center gap-2 text-sm mb-5">
+            <span class="text-green-600 font-medium">
+              ✓ Partner aus der Region
+            </span>
+          </div>
+
+          <p class="text-zinc-600 text-sm leading-7 mb-6">
+            Entrümpelungen, Haushaltsauflösungen, Kleintransporte und Hausmeisterservice in Hof und Umgebung.
+          </p>
+
+          <div class="space-y-3 text-sm mb-6">
+            <div class="flex items-center gap-3 text-zinc-700">
+              <span>📍</span>
+              <span>95028 Hof</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span>📞</span>
+              <a href="tel:+4915203110437"
+                 class="text-[#D95F02] hover:underline">
+                01520 3110437
+              </a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span>✉️</span>
+              <a href="mailto:ami.hausmeister@gmail.com"
+                 class="text-[#D95F02] hover:underline break-all">
+                ami.hausmeister@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="flex gap-3 mt-auto">
+            <a href="tel:+4915203110437"
+               class="flex-1 text-center bg-[#D95F02] text-white py-3 rounded-2xl text-sm font-medium hover:bg-[#B94E00] transition">
+              Anrufen
+            </a>
+
+            <a href="mailto:ami.hausmeister@gmail.com"
+               class="flex-1 text-center border border-zinc-300 py-3 rounded-2xl text-sm font-medium text-zinc-700 hover:bg-zinc-100 transition">
+              E-Mail
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="reveal bg-white rounded-3xl overflow-hidden border border-dashed border-orange-200 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+
+        <div class="relative h-52 bg-gradient-to-br from-orange-50 via-white to-emerald-50 flex items-center justify-center">
+          <div class="text-center px-6">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white shadow-sm flex items-center justify-center">
+              <img src="logo-handwerker.png"
+                   alt="hof-handwerker Logo"
+                   class="w-10 h-10 rounded-xl object-cover">
+            </div>
+            <p class="text-sm font-semibold text-[#D95F02]">
+              Platz für weitere Anbieter
+            </p>
+          </div>
+
+          <div class="absolute top-3 left-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+            Bald verfügbar
+          </div>
+        </div>
+
+        <div class="p-6 flex flex-col flex-1">
+
+          <h4 class="font-semibold text-2xl text-zinc-800 mb-3">
+            Weitere Betriebe folgen
+          </h4>
+
+          <p class="text-[#D95F02] text-sm font-medium mb-3 leading-relaxed">
+            Renovierung • Reparatur • Montage • Innenausbau
+          </p>
+
+          <p class="text-zinc-600 text-sm leading-7 mb-6 min-h-[112px]">
+            Hier können künftig zusätzliche Anbieter aus Hof und Umgebung erscheinen.
+            Stellen Sie schon jetzt eine Anfrage und erreichen Sie passende Betriebe direkt.
+          </p>
+
+          <div class="space-y-3 text-sm mb-6 min-h-[72px]">
+            <div class="flex items-center gap-3 text-zinc-700">
+              <span>📍</span>
+              <span>Hof und Umgebung</span>
+            </div>
+
+            <div class="flex items-center gap-3 text-zinc-700">
+              <span>📞</span>
+              <span>Kontakt über Anfrage</span>
+            </div>
+          </div>
+
+          <div class="flex gap-3 mt-auto">
+            <a href="#anfrage"
+               class="flex-1 text-center bg-[#D95F02] text-white py-3 rounded-2xl text-sm font-medium hover:bg-[#B94E00] transition">
+              Anfrage stellen
+            </a>
+
+            <a href="eintragen.html"
+               class="flex-1 text-center border border-zinc-300 py-3 rounded-2xl text-sm font-medium text-zinc-700 hover:bg-zinc-100 transition">
+              Eintragen
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="reveal bg-white rounded-3xl overflow-hidden border border-dashed border-orange-200 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+
+        <div class="relative h-52 bg-gradient-to-br from-zinc-50 via-white to-orange-50 flex items-center justify-center">
+          <div class="text-center px-6">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#D95F02] text-white flex items-center justify-center text-3xl font-bold">
+              +
+            </div>
+            <p class="text-sm font-semibold text-[#D95F02]">
+              Ihr Unternehmen auf hof-handwerker.de
+            </p>
+          </div>
+
+          <div class="absolute top-3 left-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+            Freier Platz
+          </div>
+        </div>
+
+        <div class="p-6 flex flex-col flex-1">
+
+          <h4 class="font-semibold text-2xl text-zinc-800 mb-3">
+            Ihr Handwerksbetrieb hier
+          </h4>
+
+          <p class="text-[#D95F02] text-sm font-medium mb-3 leading-relaxed">
+            Lokale Sichtbarkeit • Direkte Anfragen • Kostenlos starten
+          </p>
+
+          <p class="text-zinc-600 text-sm leading-7 mb-6 min-h-[112px]">
+            Sie bieten Handwerksleistungen in Hof oder Umgebung an?
+            Dann können Sie Ihr Unternehmen kostenlos eintragen lassen.
+          </p>
+
+          <div class="space-y-3 text-sm mb-6 min-h-[72px]">
+            <div class="flex items-center gap-3 text-zinc-700">
+              <span>📍</span>
+              <span>Hof und Umgebung</span>
+            </div>
+
+            <div class="flex items-center gap-3 text-zinc-700">
+              <span>📞</span>
+              <span>Kontakt über Eintrag</span>
+            </div>
+          </div>
+
+          <div class="mt-auto">
+            <a href="eintragen.html"
+               class="block w-full text-center bg-[#D95F02] text-white py-3 rounded-2xl text-sm font-medium hover:bg-[#B94E00] transition">
+              Betrieb eintragen
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-16">
+      <p class="text-zinc-600 mb-4">
+        Sie sind Handwerksbetrieb in Hof?
+      </p>
+
+      <a href="eintragen.html"
+         class="inline-block bg-[#D95F02] text-white px-8 py-3 rounded-2xl font-semibold hover:bg-[#B94E00] transition">
+        Jetzt Betrieb eintragen
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="tail-container px-6">
+
+    <h2 class="text-4xl font-semibold text-center mb-4">
+      Warum über hof-handwerker.de?
+    </h2>
+
+    <p class="text-center text-zinc-600 max-w-2xl mx-auto mb-16">
+      Statt lange zu suchen, senden Sie eine Anfrage - passende regionale Betriebe können sich direkt bei Ihnen melden.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-xl duration-300">
+        <div class="text-5xl mb-4">📍</div>
+        <h4 class="font-semibold text-xl mb-2">Regional</h4>
+        <p class="text-zinc-600">Fokus auf Hof und Umgebung.</p>
+      </div>
+
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-xl duration-300">
+        <div class="text-5xl mb-4">⚡</div>
+        <h4 class="font-semibold text-xl mb-2">Einfach</h4>
+        <p class="text-zinc-600">Eine Anfrage statt viele einzelne Telefonate.</p>
+      </div>
+
+      <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-xl duration-300">
+        <div class="text-5xl mb-4">🤝</div>
+        <h4 class="font-semibold text-xl mb-2">Direkt</h4>
+        <p class="text-zinc-600">Kein Callcenter und keine komplizierten Prozesse.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-[#F5F5F5]">
+  <div class="tail-container px-6">
+
+    <div class="reveal bg-white rounded-3xl border border-zinc-100 shadow-sm p-8 md:p-10 text-center max-w-4xl mx-auto hover:-translate-y-1 hover:shadow-xl transition duration-300">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+        Keine Registrierung. Kein komplizierter Prozess. Einfach anfragen.
+      </h2>
+
+      <p class="text-zinc-600 max-w-2xl mx-auto mb-8">
+        Sie müssen kein Konto erstellen und keine Betriebe einzeln anschreiben.
+        Beschreiben Sie kurz Ihr Anliegen - passende Anbieter aus der Region können sich direkt melden.
+      </p>
+
+      <a href="#anfrage"
+         class="inline-block bg-[#D95F02] text-white px-8 py-3 rounded-2xl font-semibold hover:bg-[#B94E00] transition">
+        Anfrage starten
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section id="anfrage" class="py-20 bg-[#D95F02] text-white">
+  <div class="tail-container px-6 max-w-3xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-semibold mb-4">
+        Jetzt kostenlose Anfrage stellen
+      </h2>
+      <p class="text-orange-100">
+        Beschreiben Sie kurz, welche Handwerksarbeit Sie benötigen.
+      </p>
+    </div>
+
+    <div class="reveal bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
+      <form action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-5">
+        <input type="hidden" name="_redirect" value="https://hof-handwerker.de/danke.html">
+        <input type="hidden" name="source" value="hof-handwerker.de">
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
                  class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600">
 
-          <input type="text" name="address" placeholder="PLZ / Ort / Straße (optional)" autocomplete="street-address"
+          <input type="tel" name="phone" placeholder="Telefonnummer" required inputmode="tel" autocomplete="tel"
                  class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600">
+        </div>
 
-          <select name="service" required aria-label="Welche Arbeit brauchen Sie?"
-                  class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-orange-600">
-            <option value="" disabled selected>Welche Arbeit brauchen Sie?</option>
-            <option value="Renovierung &amp; Sanierung">Renovierung &amp; Sanierung</option>
-            <option value="Reparaturen &amp; Montage">Reparaturen &amp; Montage</option>
-            <option value="Malerarbeiten">Malerarbeiten</option>
-            <option value="Trockenbau &amp; Innenausbau">Trockenbau &amp; Innenausbau</option>
-            <option value="Bad &amp; Sanitär">Bad &amp; Sanitär</option>
-            <option value="Entrümpelung &amp; Hausmeisterservice">Entrümpelung &amp; Hausmeisterservice</option>
-            <option value="Sonstiges">Sonstiges</option>
-          </select>
+        <input type="email" name="email" placeholder="E-Mail (optional)" inputmode="email" autocomplete="email"
+               class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600">
 
-          <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz, was gemacht werden soll."
-                    class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600"></textarea>
+        <input type="text" name="address" placeholder="PLZ / Ort / Straße (optional)" autocomplete="street-address"
+               class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600">
 
-          <button type="submit"
-                  class="w-full bg-orange-600 text-white py-5 rounded-2xl font-semibold text-xl hover:bg-orange-700 transition">
-            Anfrage absenden
-          </button>
-        </form>
+        <label for="service" class="sr-only">Welche Arbeit brauchen Sie?</label>
+        <select id="service" name="service" required
+                class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-orange-600">
+          <option value="" disabled selected>Welche Arbeit brauchen Sie?</option>
+          <option value="Renovierung &amp; Sanierung">Renovierung &amp; Sanierung</option>
+          <option value="Reparaturen &amp; Montage">Reparaturen &amp; Montage</option>
+          <option value="Malerarbeiten">Malerarbeiten</option>
+          <option value="Trockenbau &amp; Innenausbau">Trockenbau &amp; Innenausbau</option>
+          <option value="Bad &amp; Sanitär">Bad &amp; Sanitär</option>
+          <option value="Entrümpelung &amp; Hausmeisterservice">Entrümpelung &amp; Hausmeisterservice</option>
+          <option value="Sonstiges">Sonstiges</option>
+        </select>
 
-        <p class="text-center text-zinc-500 text-sm mt-6">
-          Unverbindlich | Kostenlos | Keine Abos
-        </p>
-      </div>
+        <label for="urgency" class="sr-only">Wann soll die Arbeit stattfinden?</label>
+        <select id="urgency" name="urgency" required
+                class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-orange-600">
+          <option value="" disabled selected>Wann soll die Arbeit stattfinden?</option>
+          <option value="So schnell wie möglich">So schnell wie möglich</option>
+          <option value="Diese Woche">Diese Woche</option>
+          <option value="Diesen Monat">Diesen Monat</option>
+          <option value="Regelmäßig">Regelmäßig</option>
+          <option value="Noch offen">Noch offen</option>
+        </select>
+
+        <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz, was gemacht werden soll."
+                  class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600"></textarea>
+
+        <button type="submit"
+                class="w-full bg-orange-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-orange-700 transition">
+          Anfrage absenden
+        </button>
+      </form>
+
+      <p class="text-center text-zinc-500 text-sm mt-4">
+        Ihre Anfrage wird an passende Anbieter aus Hof weitergeleitet.<br>
+        Unverbindlich • Kostenlos • Keine Abos
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="bg-[#F5F5F5] border border-zinc-100 rounded-3xl p-8 md:p-10 text-center shadow-sm">
-        <p class="text-sm font-semibold text-orange-600 mb-3">
-          Wer steht hinter diesem Projekt?
-        </p>
+<section class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="bg-[#F5F5F5] border border-zinc-100 rounded-3xl p-8 text-center shadow-sm">
 
-        <h2 class="text-2xl md:text-3xl font-bold text-zinc-900 mb-5">
-          Ein lokales Projekt von DK Software Studio
-        </h2>
+      <p class="text-sm font-semibold text-[#D95F02] mb-3">
+        Wer steht hinter diesem Projekt?
+      </p>
 
-        <p class="text-zinc-600 leading-7 max-w-2xl mx-auto mb-7">
-          hof-handwerker.de wurde von DK Software Studio aus Hof (Saale) entwickelt, um Menschen und lokale Handwerker einfacher zusammenzubringen – direkt, unkompliziert und regional.
-        </p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-zinc-900 mb-4">
+        Ein lokales Projekt von DK Software Studio
+      </h2>
 
-        <a href="https://dksoftwarestudio.com"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="inline-block bg-orange-500 text-white px-7 py-3 rounded-2xl font-semibold hover:bg-orange-600 transition">
-          Mehr über DK Software Studio
-        </a>
-      </div>
+      <p class="text-zinc-600 leading-7 max-w-2xl mx-auto mb-6">
+        Diese Seite wurde von DK Software Studio aus Hof (Saale) erstellt,
+        um Menschen und lokale Anbieter einfacher zusammenzubringen.
+      </p>
+
+      <a href="https://dksoftwarestudio.com"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="inline-block bg-[#D95F02] text-white px-7 py-3 rounded-2xl font-semibold hover:bg-[#B94E00] transition">
+        Mehr über DK Software Studio
+      </a>
+
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
 <footer class="bg-zinc-900 text-zinc-400 py-16">
   <div class="tail-container px-6">
     <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
+
       <div>
         <div class="flex items-center gap-3 text-white mb-6">
           <img src="logo-handwerker.png"
@@ -544,27 +697,28 @@
 
           <div class="leading-tight">
             <span class="text-xl font-bold">hof-handwerker.de</span>
-            <p class="text-xs text-zinc-400">Hof (Saale)</p>
+            <p class="text-xs text-zinc-400 -mt-1">Hof (Saale)</p>
           </div>
         </div>
 
-        <p class="text-sm leading-6">
+        <p class="text-sm">
           Lokale Vermittlungsplattform für Handwerksaufträge in Hof (Saale).
         </p>
       </div>
 
       <div>
-        <h3 class="font-semibold text-white mb-4">Navigation</h3>
+        <h5 class="font-semibold text-white mb-4">Navigation</h5>
         <ul class="space-y-2 text-sm">
-          <li><a href="#firmen" class="hover:text-white">Anbieter</a></li>
-          <li><a href="#leistungen" class="hover:text-white">Leistungen</a></li>
+          <li><a href="#firmen" class="hover:text-white">Betriebe finden</a></li>
+          <li><a href="#ablauf" class="hover:text-white">So funktioniert es</a></li>
           <li><a href="eintragen.html" class="hover:text-white">Betrieb eintragen</a></li>
         </ul>
       </div>
 
       <div>
-        <h3 class="font-semibold text-white mb-4">Partner Seiten</h3>
+        <h5 class="font-semibold text-white mb-4">Partner Seiten</h5>
         <ul class="space-y-2 text-sm">
+
           <li>
             <a href="https://hof-reinigung.de"
                target="_blank" rel="noopener noreferrer"
@@ -588,11 +742,12 @@
               hahn-wasserfilter.de
             </a>
           </li>
+
         </ul>
       </div>
 
       <div>
-        <h3 class="font-semibold text-white mb-4">Kontakt</h3>
+        <h5 class="font-semibold text-white mb-4">Kontakt</h5>
         <p class="text-sm mb-1">
           WhatsApp:
           <a href="https://wa.me/491624012037" class="text-orange-300 hover:text-white">
@@ -608,12 +763,13 @@
       </div>
 
       <div>
-        <h3 class="font-semibold text-white mb-4">Rechtliches</h3>
+        <h5 class="font-semibold text-white mb-4">Rechtliches</h5>
         <ul class="space-y-2 text-sm">
           <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
           <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
         </ul>
       </div>
+
     </div>
 
     <div class="text-center text-xs mt-16 pt-8 border-t border-zinc-800">
@@ -626,11 +782,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.reveal');
 
-    if (!('IntersectionObserver' in window)) {
-      items.forEach(item => item.classList.add('visible'));
-      return;
-    }
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -639,7 +790,7 @@
         }
       });
     }, {
-      threshold: 0.12
+      threshold: 0.08
     });
 
     items.forEach(item => observer.observe(item));
