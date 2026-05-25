@@ -33,6 +33,16 @@
       transform: translateY(0);
     }
 
+    .soft-card {
+      box-shadow: 0 10px 30px rgba(24, 24, 27, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .soft-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(24, 24, 27, 0.12);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         opacity: 1;
@@ -51,6 +61,7 @@
       <a href="index.html" class="flex items-center gap-3 shrink-0" aria-label="hof-handwerker.de Startseite">
         <img src="logo-handwerker.png"
              alt="hof-handwerker Logo"
+             onerror="this.style.display='none'"
              class="w-12 h-12 rounded-2xl object-cover">
         <div>
           <span class="block text-xl sm:text-2xl font-bold text-gray-900 leading-tight">hof-handwerker.de</span>
@@ -112,8 +123,9 @@
 
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="#formular"
-             class="bg-white hover:bg-orange-50 text-orange-700 text-lg px-8 py-4 rounded-2xl font-semibold text-center transition">
-            Kostenlos eintragen
+             class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white text-lg px-9 py-4 rounded-2xl font-semibold text-center transition shadow-xl shadow-orange-950/20">
+            <span aria-hidden="true">+</span>
+            <span>Kostenlos eintragen</span>
           </a>
 
           <a href="index.html"
@@ -124,7 +136,7 @@
 
         <div class="flex flex-wrap sm:grid sm:grid-cols-3 gap-3 mt-10 text-sm">
           <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
-            Lokal in Hof
+            Hof und Umgebung
           </div>
           <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
             Basiseintrag kostenlos
@@ -148,28 +160,66 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center border border-zinc-100 shadow-sm">
+        <div class="reveal soft-card bg-[#F8FAFC] p-8 rounded-3xl text-center border border-zinc-100">
           <div class="text-4xl mb-5" aria-hidden="true">📍</div>
           <h3 class="font-semibold text-xl mb-2">Lokale Kunden</h3>
           <p class="text-zinc-600">Anfragen von Menschen aus Hof und Umgebung.</p>
         </div>
 
-        <div class="reveal bg-[#F8FAFC] p-8 rounded-3xl text-center border border-zinc-100 shadow-sm">
+        <div class="reveal soft-card bg-[#F8FAFC] p-8 rounded-3xl text-center border border-zinc-100">
           <div class="text-4xl mb-5" aria-hidden="true">📩</div>
           <h3 class="font-semibold text-xl mb-2">Direkte Anfragen</h3>
           <p class="text-zinc-600">Kunden können Sie über die Plattform einfacher finden.</p>
         </div>
 
-        <div class="reveal bg-gray-50 p-8 rounded-3xl text-center hover:-translate-y-1 hover:shadow-xl transition duration-300">
-        <div class="text-4xl mb-4">✅</div>
-        <h3 class="font-semibold text-xl mb-2">Aktuell kostenlos</h3>
-        <p class="text-gray-600">Der Basiseintrag ist aktuell kostenlos und unverbindlich.</p>
-      </div>
+        <div class="reveal soft-card bg-gray-50 p-8 rounded-3xl text-center border border-zinc-100">
+          <div class="text-4xl mb-4 text-green-500" aria-hidden="true">✓</div>
+          <h3 class="font-semibold text-xl mb-2">Aktuell kostenlos</h3>
+          <p class="text-gray-600">Der Basiseintrag ist aktuell kostenlos und unverbindlich.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="py-20 bg-[#F5F5F5]">
+    <div class="tail-container px-6">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <p class="text-sm font-semibold text-orange-600 mb-3">Was bringt es konkret?</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Mehr lokale Auffindbarkeit ohne Provision</h2>
+        <p class="text-zinc-600">
+          Der Eintrag macht Ihr Angebot klar sichtbar und gibt Interessenten direkte Kontaktmöglichkeiten.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="reveal soft-card bg-white p-8 rounded-3xl border border-zinc-100">
+          <div class="text-4xl mb-5" aria-hidden="true">🔎</div>
+          <h3 class="font-semibold text-xl mb-3">Besser gefunden werden</h3>
+          <p class="text-zinc-600 leading-7">
+            Ihr Betrieb erscheint auf einer lokalen Themenseite für Handwerksleistungen in Hof und Umgebung.
+          </p>
+        </div>
+
+        <div class="reveal soft-card bg-white p-8 rounded-3xl border border-zinc-100">
+          <div class="text-4xl mb-5" aria-hidden="true">☎️</div>
+          <h3 class="font-semibold text-xl mb-3">Direkter Kundenkontakt</h3>
+          <p class="text-zinc-600 leading-7">
+            Interessenten können Sie telefonisch, per E-Mail, über Ihre Website oder über die Anfragefunktion erreichen.
+          </p>
+        </div>
+
+        <div class="reveal soft-card bg-white p-8 rounded-3xl border border-zinc-100">
+          <div class="text-4xl mb-5" aria-hidden="true">€</div>
+          <h3 class="font-semibold text-xl mb-3">Keine Provision</h3>
+          <p class="text-zinc-600 leading-7">
+            Der Basiseintrag ist aktuell kostenlos. Es gibt keine versteckten Gebühren für weitergeleitete Kontakte.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
     <div class="tail-container px-6">
       <div class="max-w-3xl mx-auto text-center mb-12">
         <p class="text-sm font-semibold text-orange-600 mb-3">Ablauf</p>
@@ -180,22 +230,58 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="reveal bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm">
+        <div class="reveal soft-card bg-white p-8 rounded-3xl border border-zinc-100">
           <div class="text-5xl font-bold text-orange-200 mb-6">01</div>
           <h3 class="font-semibold text-xl mb-3">Eintragen</h3>
           <p class="text-zinc-600">Sie senden uns Ihre Firmendaten über das Formular.</p>
         </div>
 
-        <div class="reveal bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm">
+        <div class="reveal soft-card bg-white p-8 rounded-3xl border border-zinc-100">
           <div class="text-5xl font-bold text-orange-200 mb-6">02</div>
           <h3 class="font-semibold text-xl mb-3">Prüfen</h3>
           <p class="text-zinc-600">Wir prüfen die Angaben und bereiten Ihren Eintrag vor.</p>
         </div>
 
-        <div class="reveal bg-white p-8 rounded-3xl border border-zinc-100 shadow-sm">
+        <div class="reveal soft-card bg-white p-8 rounded-3xl border border-zinc-100">
           <div class="text-5xl font-bold text-orange-200 mb-6">03</div>
           <h3 class="font-semibold text-xl mb-3">Sichtbar werden</h3>
           <p class="text-zinc-600">Ihr Betrieb erscheint auf der Plattform für lokale Kunden.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-[#F5F5F5]">
+    <div class="tail-container px-6">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <p class="text-sm font-semibold text-orange-600 mb-3">Beispiele</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">So kann ein Eintrag aussehen</h2>
+        <p class="text-zinc-600">
+          Bestehende Anbieter zeigen, welche Informationen Kunden schnell erfassen: Leistung, Standort, Kontakt und kurze Beschreibung.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="reveal soft-card bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100">
+          <p class="text-sm font-semibold text-orange-600 mb-3">Beispiel-Eintrag</p>
+          <h3 class="font-semibold text-2xl mb-3">Renovacio</h3>
+          <p class="text-zinc-600 leading-7 mb-5">
+            Renovierung, Sanierung und Innenausbau mit Standort in der Region Hof.
+          </p>
+          <a href="index.html#firmen" class="text-orange-600 font-semibold hover:underline">
+            Anbieter auf der Startseite ansehen
+          </a>
+        </div>
+
+        <div class="reveal soft-card bg-[#F8FAFC] p-8 rounded-3xl border border-zinc-100">
+          <p class="text-sm font-semibold text-orange-600 mb-3">Beispiel-Eintrag</p>
+          <h3 class="font-semibold text-2xl mb-3">AMI Hausmeister</h3>
+          <p class="text-zinc-600 leading-7 mb-5">
+            Entrümpelung, Haushaltsauflösungen, Kleintransporte und Hausmeisterservice in Hof.
+          </p>
+          <a href="index.html#firmen" class="text-orange-600 font-semibold hover:underline">
+            Anbieter auf der Startseite ansehen
+          </a>
         </div>
       </div>
     </div>
@@ -275,8 +361,9 @@
 
           <div class="pt-4">
             <button type="submit"
-                    class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold text-xl py-5 rounded-3xl transition">
-              Kostenlos eintragen
+                    class="w-full inline-flex items-center justify-center gap-2 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold text-xl py-5 rounded-3xl transition shadow-lg shadow-zinc-900/15">
+              <span aria-hidden="true">+</span>
+              <span>Kostenlos eintragen</span>
             </button>
 
             <p class="text-center text-sm text-zinc-500 mt-4">
@@ -297,6 +384,45 @@
         </form>
 
         <div id="form-status" class="mt-6 text-center text-sm hidden"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="tail-container px-6 max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-sm font-semibold text-orange-600 mb-3">FAQ</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Häufige Fragen</h2>
+      </div>
+
+      <div class="space-y-4">
+        <details class="reveal soft-card bg-[#F8FAFC] rounded-3xl border border-zinc-100 p-6">
+          <summary class="cursor-pointer font-semibold text-lg">Wie schnell wird mein Eintrag freigeschaltet?</summary>
+          <p class="text-zinc-600 leading-7 mt-4">
+            Wir prüfen die Angaben manuell und melden uns danach bei Ihnen. Die Freischaltung erfolgt nach Abstimmung.
+          </p>
+        </details>
+
+        <details class="reveal soft-card bg-[#F8FAFC] rounded-3xl border border-zinc-100 p-6">
+          <summary class="cursor-pointer font-semibold text-lg">Was kostet ein Eintrag?</summary>
+          <p class="text-zinc-600 leading-7 mt-4">
+            Der Basiseintrag ist aktuell kostenlos. Optionale hervorgehobene Platzierungen können später separat angeboten werden.
+          </p>
+        </details>
+
+        <details class="reveal soft-card bg-[#F8FAFC] rounded-3xl border border-zinc-100 p-6">
+          <summary class="cursor-pointer font-semibold text-lg">Kann ich meinen Eintrag später ändern?</summary>
+          <p class="text-zinc-600 leading-7 mt-4">
+            Ja. Schreiben Sie uns, wenn Telefonnummer, Leistungen, Website, Bilder oder Beschreibung angepasst werden sollen.
+          </p>
+        </details>
+
+        <details class="reveal soft-card bg-[#F8FAFC] rounded-3xl border border-zinc-100 p-6">
+          <summary class="cursor-pointer font-semibold text-lg">Brauche ich eine eigene Website?</summary>
+          <p class="text-zinc-600 leading-7 mt-4">
+            Nein. Eine Website oder ein Google-Profil ist hilfreich, aber nicht zwingend erforderlich.
+          </p>
+        </details>
       </div>
     </div>
   </section>
@@ -323,6 +449,7 @@
         <div class="flex items-center gap-3 text-white mb-6">
           <img src="logo-handwerker.png"
                alt="hof-handwerker Logo"
+               onerror="this.style.display='none'"
                class="w-10 h-10 rounded-2xl object-cover">
 
           <div class="leading-tight">
