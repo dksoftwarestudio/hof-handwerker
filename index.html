@@ -34,6 +34,24 @@
       transform: translateY(0);
     }
 
+    .soft-card {
+      box-shadow: 0 10px 30px rgba(24, 24, 27, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .soft-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(24, 24, 27, 0.12);
+    }
+
+    .media-zoom img {
+      transition: transform 0.3s ease;
+    }
+
+    .soft-card:hover .media-zoom img {
+      transform: scale(1.04);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         opacity: 1;
@@ -53,6 +71,7 @@
       <a href="index.html" class="flex items-center gap-3 shrink-0">
         <img src="logo-handwerker.png"
              alt="hof-handwerker Logo"
+             onerror="this.style.display='none'"
              class="w-12 h-12 rounded-xl object-cover">
         <div>
           <span class="text-2xl font-bold text-gray-800">hof-handwerker.de</span>
@@ -123,7 +142,7 @@
 
       <div class="flex flex-wrap sm:grid sm:grid-cols-3 gap-3 mt-14 text-sm">
         <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">
-          Regional aus Hof
+          Regional in Hof und Umgebung
         </div>
         <div class="inline-flex sm:block bg-white/15 backdrop-blur-sm rounded-2xl px-4 py-3">
           Kostenlos &amp; unverbindlich
@@ -256,9 +275,9 @@
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      <div class="reveal bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+      <div class="reveal soft-card bg-white rounded-3xl overflow-hidden border border-zinc-100 flex flex-col h-full">
 
-        <div class="relative h-52">
+        <div class="relative aspect-video overflow-hidden media-zoom">
           <img src="renovacio-bad.jpg"
                alt="Renovacio Hof"
                class="w-full h-full object-cover">
@@ -291,14 +310,14 @@
           <div class="space-y-3 text-sm mb-6">
             <div class="flex items-start gap-3 text-zinc-700">
               <span>📍</span>
-              <span>Westendstr. 15<br>95145 Oberkotzau</span>
+              <span>95145 Oberkotzau</span>
             </div>
 
             <div class="flex items-center gap-3">
               <span>📞</span>
               <a href="tel:+491606805080"
                  class="text-[#D95F02] hover:underline">
-                +49 1606805080
+                +49 160 6805080
               </a>
             </div>
 
@@ -328,9 +347,9 @@
         </div>
       </div>
 
-      <div class="reveal bg-white rounded-3xl overflow-hidden border border-zinc-100 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+      <div class="reveal soft-card bg-white rounded-3xl overflow-hidden border border-zinc-100 flex flex-col h-full">
 
-        <div class="relative h-52">
+        <div class="relative aspect-video overflow-hidden media-zoom">
           <img src="IMG_2986.jpeg"
                alt="AMI Hausmeister Hof"
                class="w-full h-full object-cover">
@@ -398,13 +417,14 @@
         </div>
       </div>
 
-      <div class="reveal bg-white rounded-3xl overflow-hidden border border-dashed border-orange-200 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+      <div class="reveal soft-card bg-white rounded-3xl overflow-hidden border border-dashed border-orange-200 flex flex-col h-full">
 
-        <div class="relative h-52 bg-gradient-to-br from-orange-50 via-white to-emerald-50 flex items-center justify-center">
+        <div class="relative aspect-video bg-gradient-to-br from-orange-50 via-white to-emerald-50 flex items-center justify-center">
           <div class="text-center px-6">
             <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white shadow-sm flex items-center justify-center">
               <img src="logo-handwerker.png"
                    alt="hof-handwerker Logo"
+                   onerror="this.style.display='none'"
                    class="w-10 h-10 rounded-xl object-cover">
             </div>
             <p class="text-sm font-semibold text-[#D95F02]">
@@ -459,9 +479,9 @@
         </div>
       </div>
 
-      <div class="reveal bg-white rounded-3xl overflow-hidden border border-dashed border-orange-200 shadow-sm hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col h-full">
+      <div class="reveal soft-card bg-white rounded-3xl overflow-hidden border border-dashed border-orange-200 flex flex-col h-full">
 
-        <div class="relative h-52 bg-gradient-to-br from-zinc-50 via-white to-orange-50 flex items-center justify-center">
+        <div class="relative aspect-video bg-gradient-to-br from-zinc-50 via-white to-orange-50 flex items-center justify-center">
           <div class="text-center px-6">
             <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#D95F02] text-white flex items-center justify-center text-3xl font-bold">
               +
@@ -597,54 +617,84 @@
       </p>
     </div>
 
-    <div class="reveal bg-white text-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
-      <form action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-5">
+    <div class="grid sm:grid-cols-3 gap-3 mb-8 text-sm">
+      <div class="bg-white/15 border border-white/15 rounded-2xl px-4 py-3 text-center">
+        Kostenlos &amp; unverbindlich
+      </div>
+      <div class="bg-white/15 border border-white/15 rounded-2xl px-4 py-3 text-center">
+        Direkter Kontakt zu lokalen Betrieben
+      </div>
+      <div class="bg-white/15 border border-white/15 rounded-2xl px-4 py-3 text-center">
+        Keine Registrierung nötig
+      </div>
+    </div>
+
+    <div class="reveal bg-white text-zinc-800 rounded-3xl p-7 md:p-10 shadow-xl">
+      <form action="https://formspree.io/f/mjgpagzy" method="POST" class="space-y-6">
         <input type="hidden" name="_redirect" value="https://hof-handwerker.de/danke.html">
         <input type="hidden" name="source" value="hof-handwerker.de">
 
         <div class="grid md:grid-cols-2 gap-5">
-          <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
-                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600">
+          <div class="relative">
+            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-400" aria-hidden="true">👤</span>
+            <input type="text" name="name" placeholder="Vor- und Nachname" required autocomplete="name"
+                   class="w-full pl-12 pr-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600">
+          </div>
 
-          <input type="tel" name="phone" placeholder="Telefonnummer" required inputmode="tel" autocomplete="tel"
-                 class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600">
+          <div class="relative">
+            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-400" aria-hidden="true">📞</span>
+            <input type="tel" name="phone" placeholder="Telefonnummer" required inputmode="tel" autocomplete="tel"
+                   class="w-full pl-12 pr-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600">
+          </div>
         </div>
 
-        <input type="email" name="email" placeholder="E-Mail (optional)" inputmode="email" autocomplete="email"
-               class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600">
+        <div class="relative">
+          <span class="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-400" aria-hidden="true">✉️</span>
+          <input type="email" name="email" placeholder="E-Mail (optional)" inputmode="email" autocomplete="email"
+                 class="w-full pl-12 pr-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600">
+        </div>
 
-        <input type="text" name="address" placeholder="PLZ / Ort / Straße (optional)" autocomplete="street-address"
-               class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600">
+        <div class="relative">
+          <span class="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-400" aria-hidden="true">🏠</span>
+          <input type="text" name="address" placeholder="PLZ / Ort / Straße (optional)" autocomplete="street-address"
+                 class="w-full pl-12 pr-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600">
+        </div>
 
         <label for="service" class="sr-only">Welche Arbeit brauchen Sie?</label>
-        <select id="service" name="service" required
-                class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-orange-600">
-          <option value="" disabled selected>Welche Arbeit brauchen Sie?</option>
-          <option value="Renovierung &amp; Sanierung">Renovierung &amp; Sanierung</option>
-          <option value="Reparaturen &amp; Montage">Reparaturen &amp; Montage</option>
-          <option value="Malerarbeiten">Malerarbeiten</option>
-          <option value="Trockenbau &amp; Innenausbau">Trockenbau &amp; Innenausbau</option>
-          <option value="Bad &amp; Sanitär">Bad &amp; Sanitär</option>
-          <option value="Entrümpelung &amp; Hausmeisterservice">Entrümpelung &amp; Hausmeisterservice</option>
-          <option value="Sonstiges">Sonstiges</option>
-        </select>
+        <div class="relative">
+          <span class="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-400 pointer-events-none" aria-hidden="true">🛠️</span>
+          <select id="service" name="service" required
+                  class="w-full pl-12 pr-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600">
+            <option value="" disabled selected>Welche Arbeit brauchen Sie?</option>
+            <option value="Renovierung &amp; Sanierung">Renovierung &amp; Sanierung</option>
+            <option value="Reparaturen &amp; Montage">Reparaturen &amp; Montage</option>
+            <option value="Malerarbeiten">Malerarbeiten</option>
+            <option value="Trockenbau &amp; Innenausbau">Trockenbau &amp; Innenausbau</option>
+            <option value="Bad &amp; Sanitär">Bad &amp; Sanitär</option>
+            <option value="Entrümpelung &amp; Hausmeisterservice">Entrümpelung &amp; Hausmeisterservice</option>
+            <option value="Sonstiges">Sonstiges</option>
+          </select>
+        </div>
 
         <label for="urgency" class="sr-only">Wann soll die Arbeit stattfinden?</label>
-        <select id="urgency" name="urgency" required
-                class="w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-orange-600">
-          <option value="" disabled selected>Wann soll die Arbeit stattfinden?</option>
-          <option value="So schnell wie möglich">So schnell wie möglich</option>
-          <option value="Diese Woche">Diese Woche</option>
-          <option value="Diesen Monat">Diesen Monat</option>
-          <option value="Regelmäßig">Regelmäßig</option>
-          <option value="Noch offen">Noch offen</option>
-        </select>
+        <div class="relative">
+          <span class="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-400 pointer-events-none" aria-hidden="true">📅</span>
+          <select id="urgency" name="urgency" required
+                  class="w-full pl-12 pr-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 text-zinc-700 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600">
+            <option value="" disabled selected>Wann soll die Arbeit stattfinden?</option>
+            <option value="So schnell wie möglich">So schnell wie möglich</option>
+            <option value="Diese Woche">Diese Woche</option>
+            <option value="Diesen Monat">Diesen Monat</option>
+            <option value="Regelmäßig">Regelmäßig</option>
+            <option value="Noch offen">Noch offen</option>
+          </select>
+        </div>
 
         <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz, was gemacht werden soll."
-                  class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600"></textarea>
+                  class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600"></textarea>
 
         <button type="submit"
-                class="w-full bg-orange-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-orange-700 transition">
+                class="w-full bg-zinc-900 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-zinc-800 transition shadow-lg shadow-zinc-900/15">
           Anfrage absenden
         </button>
       </form>
@@ -693,6 +743,7 @@
         <div class="flex items-center gap-3 text-white mb-6">
           <img src="logo-handwerker.png"
                alt="hof-handwerker Logo"
+               onerror="this.style.display='none'"
                class="w-10 h-10 rounded-2xl object-cover">
 
           <div class="leading-tight">
