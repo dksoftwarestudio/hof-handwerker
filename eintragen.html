@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Als Handwerker eintragen - hof-handwerker.de</title>
-  <meta name="description" content="Als Handwerksbetrieb in Hof eintragen und lokale Kundenanfragen erhalten. Für Handwerker, Renovierung, Sanierung, Reparaturen und Innenausbau.">
+  <meta name="description" content="Als Handwerksbetrieb in Hof eintragen und von lokalen Interessenten gefunden werden. Für Handwerker, Renovierung, Sanierung, Reparaturen und Innenausbau.">
+  <link rel="canonical" href="https://hof-handwerker.de/eintragen.html">
+  <meta property="og:title" content="Als Handwerker in Hof eintragen | hof-handwerker.de">
+  <meta property="og:description" content="Handwerksbetrieb aus Hof und Umgebung kostenlos eintragen und auf hof-handwerker.de sichtbar werden.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hof-handwerker.de/eintragen.html">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -56,15 +61,15 @@
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
 <header class="bg-white/95 shadow-sm sticky top-0 z-50 backdrop-blur">
-  <div class="tail-container px-6 py-4">
-    <div class="flex items-center justify-between gap-6">
+  <div class="tail-container px-4 sm:px-6 py-4">
+    <div class="flex items-center justify-between gap-3 sm:gap-6">
       <a href="index.html" class="flex items-center gap-3 shrink-0" aria-label="hof-handwerker.de Startseite">
         <img src="logo-handwerker.png"
              alt="hof-handwerker Logo"
              onerror="this.style.display='none'"
-             class="w-12 h-12 rounded-2xl object-cover">
+             class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl object-cover">
         <div>
-          <span class="block text-xl sm:text-2xl font-bold text-gray-900 leading-tight">hof-handwerker.de</span>
+          <span class="block text-lg sm:text-2xl font-bold text-gray-900 leading-tight whitespace-nowrap">hof-handwerker.de</span>
           <p class="text-xs text-gray-500">Hof (Saale)</p>
         </div>
       </a>
@@ -88,18 +93,42 @@
           Eintragen
         </a>
       </div>
+
+      <button type="button"
+              id="mobile-menu-button"
+              class="md:hidden inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white text-zinc-900 shadow-sm transition hover:border-orange-200 hover:text-orange-600"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              aria-label="Menü öffnen">
+        <svg id="mobile-menu-open-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg id="mobile-menu-close-icon" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
 
-    <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
-      <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
-         class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium">
-        WhatsApp
-      </a>
+    <div id="mobile-menu" class="md:hidden hidden mt-4 border-t border-zinc-100 pt-4">
+      <nav class="flex flex-col gap-1 text-base font-medium" aria-label="Mobile Navigation">
+        <a href="index.html" class="rounded-2xl px-4 py-3 text-zinc-700 hover:bg-orange-50 hover:text-orange-600 transition">Start</a>
+        <a href="index.html#firmen" class="rounded-2xl px-4 py-3 text-zinc-700 hover:bg-orange-50 hover:text-orange-600 transition">Anbieter</a>
+        <a href="index.html#leistungen" class="rounded-2xl px-4 py-3 text-zinc-700 hover:bg-orange-50 hover:text-orange-600 transition">Leistungen</a>
+        <a href="eintragen.html" class="rounded-2xl px-4 py-3 text-orange-600 bg-orange-50 font-semibold transition">Betrieb eintragen</a>
+        <a href="kontakt.html" class="rounded-2xl px-4 py-3 text-zinc-700 hover:bg-orange-50 hover:text-orange-600 transition">Kontakt</a>
+      </nav>
 
-      <a href="#formular"
-         class="text-center bg-orange-600 text-white py-3 rounded-2xl font-medium">
-        Eintragen
-      </a>
+      <div class="grid grid-cols-2 gap-3 mt-4">
+        <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
+           class="text-center bg-emerald-500 hover:bg-emerald-600 text-white py-3 rounded-2xl font-medium transition">
+          WhatsApp
+        </a>
+
+        <a href="#formular"
+           class="text-center bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-2xl font-medium transition">
+          Eintragen
+        </a>
+      </div>
     </div>
   </div>
 </header>
@@ -118,7 +147,7 @@
         </h1>
 
         <p class="text-lg md:text-2xl mb-9 text-orange-50 max-w-2xl leading-relaxed">
-          Erhalten Sie direkte Anfragen von Kunden aus Hof und Umgebung. Der Basiseintrag ist aktuell kostenlos.
+          Erhöhen Sie Ihre Sichtbarkeit für Kunden aus Hof und Umgebung. Der Basiseintrag ist aktuell kostenlos.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4">
@@ -180,7 +209,7 @@
           <div class="text-4xl mb-5" aria-hidden="true">€</div>
           <h3 class="font-semibold text-xl mb-3">Keine Provision</h3>
           <p class="text-zinc-600 leading-7">
-            Der Basiseintrag ist aktuell kostenlos. Es gibt keine versteckten Gebühren für weitergeleitete Kontakte.
+          Der Basiseintrag ist aktuell kostenlos. Es gibt keine versteckten Gebühren für mögliche Kontaktanfragen.
           </p>
         </div>
       </div>
@@ -235,7 +264,7 @@
         </h3>
 
         <p class="text-zinc-600">
-          Ihr Betrieb erscheint auf der Plattform für lokale Kunden.
+          Ihr Betrieb kann auf hof-handwerker.de für lokale Interessenten sichtbar werden.
         </p>
       </div>
 
@@ -314,6 +343,14 @@
                       class="resize-none w-full px-5 py-4 border border-zinc-200 bg-[#F8FAFC] rounded-3xl focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600"
                       placeholder="Welche Leistungen bieten Sie an? (Renovierung, Reparaturen, Sanitär, Elektrik, Montage usw.)"></textarea>
           </div>
+
+          <label class="flex items-start gap-3 text-sm leading-6 text-zinc-600">
+            <input type="checkbox" name="Datenschutz" required
+                   class="mt-1 h-4 w-4 rounded border-zinc-300 text-orange-600 focus:ring-orange-500">
+            <span>
+              Ich habe die <a href="datenschutz.html" class="text-[#D95F02] underline">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben einverstanden.
+            </span>
+          </label>
 
           <div class="pt-4">
             <button type="submit"
@@ -491,6 +528,40 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.reveal');
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('mobile-menu-open-icon');
+    const closeIcon = document.getElementById('mobile-menu-close-icon');
+
+    if (menuButton && mobileMenu && openIcon && closeIcon) {
+      const setMenuOpen = (isOpen) => {
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        openIcon.classList.toggle('hidden', isOpen);
+        closeIcon.classList.toggle('hidden', !isOpen);
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+        menuButton.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+      };
+
+      menuButton.addEventListener('click', () => {
+        setMenuOpen(mobileMenu.classList.contains('hidden'));
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setMenuOpen(false));
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setMenuOpen(false);
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.matchMedia('(min-width: 768px)').matches) {
+          setMenuOpen(false);
+        }
+      });
+    }
 
     if (!('IntersectionObserver' in window)) {
       items.forEach(item => item.classList.add('visible'));
