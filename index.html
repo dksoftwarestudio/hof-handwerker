@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hof-handwerker.de | Handwerker in Hof finden</title>
-  <meta name="description" content="Handwerker in Hof finden - kostenlose Anfrage für Renovierung, Sanierung, Reparaturen, Innenausbau, Montage und weitere Handwerksarbeiten. Anbieter aus Hof und Umgebung erhalten.">
+  <meta name="description" content="Handwerker in Hof finden - kostenlose Anfrage für Renovierung, Sanierung, Reparaturen, Innenausbau, Montage und weitere Handwerksarbeiten. Passende Anbieter aus Hof und Umgebung erreichen.">
+  <link rel="canonical" href="https://hof-handwerker.de/">
+  <meta property="og:title" content="Handwerker in Hof finden | hof-handwerker.de">
+  <meta property="og:description" content="Kostenlose Anfrage für Renovierung, Reparaturen, Innenausbau, Montage und weitere Handwerksarbeiten in Hof und Umgebung stellen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hof-handwerker.de/">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -65,16 +70,16 @@
 <body class="bg-[#F5F5F5] text-zinc-800 font-sans">
 
 <header class="bg-white shadow-sm sticky top-0 z-50">
-  <div class="tail-container px-6 py-4">
+  <div class="tail-container px-4 sm:px-6 py-4">
 
-    <div class="flex items-center justify-between gap-6">
+    <div class="flex items-center justify-between gap-3 sm:gap-6">
       <a href="index.html" class="flex items-center gap-3 shrink-0">
         <img src="logo-handwerker.png"
              alt="hof-handwerker Logo"
              onerror="this.style.display='none'"
-             class="w-12 h-12 rounded-xl object-cover">
+             class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-cover">
         <div>
-          <span class="text-2xl font-bold text-gray-800">hof-handwerker.de</span>
+          <span class="block text-lg sm:text-2xl font-bold text-gray-800 leading-tight whitespace-nowrap">hof-handwerker.de</span>
           <p class="text-xs text-gray-500 -mt-1">Hof (Saale)</p>
         </div>
       </a>
@@ -97,18 +102,41 @@
           Anfrage stellen
         </a>
       </div>
+
+      <button type="button"
+              id="mobile-menu-button"
+              class="md:hidden inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 bg-white text-zinc-900 shadow-sm transition hover:border-orange-200 hover:text-orange-600"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              aria-label="Menü öffnen">
+        <svg id="mobile-menu-open-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg id="mobile-menu-close-icon" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
 
-    <div class="md:hidden grid grid-cols-2 gap-3 mt-4">
-      <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
-         class="text-center bg-emerald-500 text-white py-3 rounded-2xl font-medium">
-        WhatsApp
-      </a>
+    <div id="mobile-menu" class="md:hidden hidden mt-4 border-t border-zinc-100 pt-4">
+      <nav class="flex flex-col gap-1 text-base font-medium" aria-label="Mobile Navigation">
+        <a href="#leistungen" class="rounded-2xl px-4 py-3 text-zinc-700 hover:bg-orange-50 hover:text-orange-600 transition">Leistungen</a>
+        <a href="#firmen" class="rounded-2xl px-4 py-3 text-orange-600 bg-orange-50 font-semibold transition">Handwerker</a>
+        <a href="eintragen.html" class="rounded-2xl px-4 py-3 text-zinc-700 hover:bg-orange-50 hover:text-orange-600 transition">Als Betrieb eintragen</a>
+        <a href="kontakt.html" class="rounded-2xl px-4 py-3 text-zinc-700 hover:bg-orange-50 hover:text-orange-600 transition">Kontakt</a>
+      </nav>
 
-      <a href="#anfrage"
-         class="text-center bg-orange-600 text-white py-3 rounded-2xl font-medium">
-        Anfrage
-      </a>
+      <div class="grid grid-cols-2 gap-3 mt-4">
+        <a href="https://wa.me/491624012037" target="_blank" rel="noopener noreferrer"
+           class="text-center bg-emerald-500 hover:bg-emerald-600 text-white py-3 rounded-2xl font-medium transition">
+          WhatsApp
+        </a>
+
+        <a href="#anfrage"
+           class="text-center bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-2xl font-medium transition">
+          Anfrage
+        </a>
+      </div>
     </div>
 
   </div>
@@ -184,7 +212,7 @@
         </div>
         <h3 class="font-semibold text-xl mb-3">Betriebe prüfen</h3>
         <p class="text-zinc-600">
-          Ihre Anfrage wird an passende Anbieter aus Hof und Umgebung weitergeleitet.
+          Ihre Anfrage kann an passende Anbieter aus Hof und Umgebung weitergeleitet werden.
         </p>
       </div>
 
@@ -218,7 +246,7 @@
         Für viele Arbeiten rund um Haus, Wohnung und Betrieb
       </h2>
       <p class="text-zinc-600">
-        Beschreiben Sie kurz Ihren Bedarf. Wir leiten die Anfrage passend weiter oder stellen den direkten Kontakt her.
+        Beschreiben Sie kurz Ihren Bedarf. Wir können die Anfrage passend weiterleiten oder den direkten Kontakt herstellen.
       </p>
     </div>
 
@@ -226,6 +254,7 @@
       <div class="reveal soft-card bg-white rounded-3xl overflow-hidden border border-zinc-100 flex flex-col h-full">
         <div class="aspect-video overflow-hidden media-zoom">
           <img src="Malerarbeiten.jpg"
+               alt="Malerarbeiten und Renovierung"
                class="w-full h-full object-cover">
         </div>
         <div class="p-6 flex flex-col flex-1">
@@ -484,7 +513,7 @@
 
           <p class="text-zinc-600 text-sm leading-7 mb-6 min-h-[112px]">
             Hier können künftig zusätzliche Anbieter aus Hof und Umgebung erscheinen.
-            Stellen Sie schon jetzt eine Anfrage und erreichen Sie passende Betriebe direkt.
+            Stellen Sie schon jetzt eine Anfrage, damit passende Betriebe direkt erreicht werden können.
           </p>
 
           <div class="space-y-3 text-sm mb-6 min-h-[72px]">
@@ -600,7 +629,7 @@
       <div class="reveal bg-[#F8FAFC] rounded-3xl overflow-hidden transition hover:-translate-y-1 hover:shadow-xl duration-300">
         
         <img src="regional1.jpg"
-             alt="Regionaler Reinigungsservice in Hof"
+             alt="Regionaler Handwerkerservice in Hof"
              class="w-full h-60 object-cover">
 
         <div class="p-8 text-center">
@@ -618,7 +647,7 @@
       <div class="reveal bg-[#F8FAFC] rounded-3xl overflow-hidden transition hover:-translate-y-1 hover:shadow-xl duration-300">
         
         <img src="einfach.jpg"
-             alt="Einfache Anfrage über hof-reinigung.de"
+             alt="Einfache Anfrage über hof-handwerker.de"
              class="w-full h-60 object-cover">
 
         <div class="p-8 text-center">
@@ -763,6 +792,14 @@
         <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz, was gemacht werden soll."
                   class="resize-none w-full px-5 py-4 rounded-2xl bg-[#F8FAFC] border border-zinc-200 focus:outline-none focus:border-orange-600 focus:ring-1 focus:ring-orange-600"></textarea>
 
+        <label class="flex items-start gap-3 text-sm leading-6 text-zinc-600">
+          <input type="checkbox" name="privacy" required
+                 class="mt-1 h-4 w-4 rounded border-zinc-300 text-orange-600 focus:ring-orange-500">
+          <span>
+            Ich habe die <a href="datenschutz.html" class="text-[#D95F02] underline">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben einverstanden.
+          </span>
+        </label>
+
         <button type="submit"
                 class="w-full bg-zinc-900 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-zinc-800 transition shadow-lg shadow-zinc-900/15">
           Anfrage absenden
@@ -770,7 +807,7 @@
       </form>
 
       <p class="text-center text-zinc-500 text-sm mt-4">
-        Ihre Anfrage wird an passende Anbieter aus Hof weitergeleitet.<br>
+        Ihre Anfrage kann an passende Anbieter aus Hof und Umgebung weitergeleitet werden.<br>
         Unverbindlich • Kostenlos • Keine Abos
       </p>
     </div>
@@ -902,6 +939,40 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.reveal');
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('mobile-menu-open-icon');
+    const closeIcon = document.getElementById('mobile-menu-close-icon');
+
+    if (menuButton && mobileMenu && openIcon && closeIcon) {
+      const setMenuOpen = (isOpen) => {
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        openIcon.classList.toggle('hidden', isOpen);
+        closeIcon.classList.toggle('hidden', !isOpen);
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+        menuButton.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+      };
+
+      menuButton.addEventListener('click', () => {
+        setMenuOpen(mobileMenu.classList.contains('hidden'));
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setMenuOpen(false));
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setMenuOpen(false);
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.matchMedia('(min-width: 768px)').matches) {
+          setMenuOpen(false);
+        }
+      });
+    }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
