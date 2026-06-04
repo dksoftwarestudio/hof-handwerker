@@ -10,16 +10,6 @@
   <meta property="og:description" content="Kostenlose Anfrage für Renovierung, Reparaturen, Innenausbau, Montage und weitere Handwerksarbeiten in Hof und Umgebung stellen.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hof-handwerker.de/">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKLB2SP37X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BKLB2SP37X');
-</script>
-
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -71,6 +61,23 @@
         opacity: 1;
         transform: none;
         transition: none;
+      }
+    }
+
+    .cookie-consent {
+      position: fixed;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      z-index: 60;
+    }
+
+    @media (min-width: 768px) {
+      .cookie-consent {
+        left: auto;
+        right: 24px;
+        bottom: 24px;
+        max-width: 440px;
       }
     }
   </style>
@@ -805,7 +812,7 @@
           <input type="checkbox" name="privacy" required
                  class="mt-1 h-4 w-4 rounded border-zinc-300 text-orange-600 focus:ring-orange-500">
           <span>
-            Ich habe die <a href="datenschutz.html" class="text-[#D95F02] underline">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben einverstanden.
+            Ich habe die <a href="datenschutz.html" class="text-[#D95F02] underline">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben über Formspree sowie der möglichen Weiterleitung an passende Betriebe einverstanden.
           </span>
         </label>
 
@@ -945,13 +952,82 @@
   </div>
 </footer>
 
+<div id="cookie-consent"
+     class="cookie-consent hidden bg-white text-zinc-800 rounded-3xl border border-zinc-200 shadow-2xl p-5"
+     role="dialog"
+     aria-live="polite"
+     aria-labelledby="cookie-consent-title">
+  <h2 id="cookie-consent-title" class="text-lg font-semibold mb-2">
+    Cookies &amp; Statistik
+  </h2>
+  <p class="text-sm leading-6 text-zinc-600 mb-4">
+    Wir verwenden Google Analytics nur, wenn Sie ausdrücklich zustimmen. Ohne Zustimmung werden keine Analytics-Cookies gesetzt.
+  </p>
+  <div class="flex flex-col sm:flex-row gap-3">
+    <button type="button"
+            id="cookie-consent-accept"
+            class="flex-1 bg-[#D95F02] text-white px-4 py-3 rounded-2xl font-semibold hover:bg-[#B94E00] transition">
+      Analytics akzeptieren
+    </button>
+    <button type="button"
+            id="cookie-consent-reject"
+            class="flex-1 border border-zinc-300 px-4 py-3 rounded-2xl font-semibold text-zinc-700 hover:bg-zinc-100 transition">
+      Nur notwendige Cookies
+    </button>
+  </div>
+  <p class="text-xs text-zinc-500 mt-3">
+    Details finden Sie in der <a href="datenschutz.html" class="text-[#D95F02] underline">Datenschutzerklärung</a>.
+  </p>
+</div>
+
 <script>
+  const GA_MEASUREMENT_ID = 'G-BKLB2SP37X';
+  const ANALYTICS_CONSENT_KEY = 'hofHandwerkerAnalyticsConsent';
+
+  const loadGoogleAnalytics = () => {
+    if (window.__hofHandwerkerGaLoaded) {
+      return;
+    }
+
+    window.__hofHandwerkerGaLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function gtag() {
+      window.dataLayer.push(arguments);
+    };
+
+    const googleAnalyticsScript = document.createElement('script');
+    googleAnalyticsScript.async = true;
+    googleAnalyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    document.head.appendChild(googleAnalyticsScript);
+
+    window.gtag('js', new Date());
+    window.gtag('config', GA_MEASUREMENT_ID, { anonymize_ip: true });
+  };
+
+  const deleteAnalyticsCookie = (name, domain) => {
+    document.cookie = `${name}=; Max-Age=0; path=/; SameSite=Lax${domain ? `; domain=${domain}` : ''}`;
+  };
+
+  const clearGoogleAnalyticsCookies = () => {
+    const host = window.location.hostname;
+    const rootDomain = host.startsWith('www.') ? host.slice(4) : host;
+
+    ['_ga', `_ga_${GA_MEASUREMENT_ID.replace('G-', '')}`].forEach((cookieName) => {
+      deleteAnalyticsCookie(cookieName);
+      deleteAnalyticsCookie(cookieName, host);
+      deleteAnalyticsCookie(cookieName, `.${rootDomain}`);
+    });
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.reveal');
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const openIcon = document.getElementById('mobile-menu-open-icon');
     const closeIcon = document.getElementById('mobile-menu-close-icon');
+    const cookieConsent = document.getElementById('cookie-consent');
+    const acceptAnalyticsButton = document.getElementById('cookie-consent-accept');
+    const rejectAnalyticsButton = document.getElementById('cookie-consent-reject');
 
     if (menuButton && mobileMenu && openIcon && closeIcon) {
       const setMenuOpen = (isOpen) => {
@@ -995,6 +1071,32 @@
     });
 
     items.forEach(item => observer.observe(item));
+
+    const analyticsConsent = localStorage.getItem(ANALYTICS_CONSENT_KEY);
+
+    if (analyticsConsent === 'accepted') {
+      loadGoogleAnalytics();
+    } else if (analyticsConsent === 'rejected') {
+      clearGoogleAnalyticsCookies();
+    } else if (cookieConsent) {
+      cookieConsent.classList.remove('hidden');
+    }
+
+    if (acceptAnalyticsButton && cookieConsent) {
+      acceptAnalyticsButton.addEventListener('click', () => {
+        localStorage.setItem(ANALYTICS_CONSENT_KEY, 'accepted');
+        cookieConsent.classList.add('hidden');
+        loadGoogleAnalytics();
+      });
+    }
+
+    if (rejectAnalyticsButton && cookieConsent) {
+      rejectAnalyticsButton.addEventListener('click', () => {
+        localStorage.setItem(ANALYTICS_CONSENT_KEY, 'rejected');
+        cookieConsent.classList.add('hidden');
+        clearGoogleAnalyticsCookies();
+      });
+    }
   });
 </script>
 
