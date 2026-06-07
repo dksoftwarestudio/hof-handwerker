@@ -56,6 +56,25 @@
       transform: scale(1.04);
     }
 
+    .company-card {
+      min-height: 660px;
+    }
+
+    .company-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+    }
+
+    .company-card-description {
+      flex: 1 1 auto;
+    }
+
+    .company-card-contact,
+    .company-card-actions {
+      flex: 0 0 auto;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .reveal {
         opacity: 1;
@@ -355,7 +374,7 @@
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      <div class="reveal soft-card bg-white rounded-3xl overflow-hidden border border-zinc-100 flex flex-col h-full">
+      <div class="reveal soft-card company-card bg-white rounded-3xl overflow-hidden border border-zinc-100 flex flex-col h-full">
 
         <div class="relative aspect-video overflow-hidden media-zoom">
           <img src="renovacio-bad.jpg"
@@ -367,7 +386,7 @@
           </div>
         </div>
 
-        <div class="p-6 flex flex-col flex-1">
+        <div class="p-6 company-card-body">
 
           <h4 class="font-semibold text-2xl text-zinc-800 mb-3">
             Renovacio
@@ -383,11 +402,11 @@
             </span>
           </div>
 
-          <p class="text-zinc-600 text-sm leading-7 mb-6">
+          <p class="company-card-description text-zinc-600 text-sm leading-7 mb-6">
             Handwerksleistungen für Renovierung, Sanierung, Innenausbau und weitere Arbeiten in Hof und Umgebung.
           </p>
 
-          <div class="space-y-3 text-sm mb-6">
+          <div class="company-card-contact space-y-3 text-sm mb-6">
             <div class="flex items-start gap-3 text-zinc-700">
               <span>📍</span>
               <span>95145 Oberkotzau</span>
@@ -410,7 +429,7 @@
             </div>
           </div>
 
-          <div class="flex gap-3 mt-auto">
+          <div class="company-card-actions flex gap-3">
             <a href="tel:+491606805080"
                class="flex-1 text-center bg-[#D95F02] text-white py-3 rounded-2xl text-sm font-medium hover:bg-[#B94E00] transition">
               Anrufen
@@ -427,7 +446,79 @@
         </div>
       </div>
 
-      <div class="reveal soft-card bg-white rounded-3xl overflow-hidden border border-zinc-100 flex flex-col h-full">
+      <div class="reveal soft-card company-card bg-white rounded-3xl overflow-hidden border border-zinc-100 flex flex-col h-full">
+
+        <div class="relative aspect-video overflow-hidden media-zoom">
+          <img src="Malerarbeiten.jpg"
+               alt="Exclusiv Wohnen Renovierung und Innenausbau"
+               class="w-full h-full object-cover">
+
+          <div class="absolute top-3 left-3 bg-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+            Partner aus der Region
+          </div>
+        </div>
+
+        <div class="p-6 company-card-body">
+
+          <h4 class="font-semibold text-2xl text-zinc-800 mb-3">
+            Exclusiv Wohnen
+          </h4>
+
+          <p class="text-[#D95F02] text-sm font-medium mb-3 leading-relaxed">
+            Renovierung • Innenausbau • Trockenbau • Sanierung
+          </p>
+
+          <div class="flex items-center gap-2 text-sm mb-5">
+            <span class="text-green-600 font-medium">
+              ✓ Regional geprüft
+            </span>
+          </div>
+
+          <p class="company-card-description text-zinc-600 text-sm leading-7 mb-6">
+            Renovierungs-, Sanierungs- und Innenausbauarbeiten für Privat- und Gewerbekunden in Hof, Naila und Umgebung.
+          </p>
+
+          <div class="company-card-contact space-y-3 text-sm mb-6">
+            <div class="flex items-center gap-3 text-zinc-700">
+              <span>📍</span>
+              <span>95119 Naila</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span>📞</span>
+              <a href="tel:+491755070701"
+                 class="text-[#D95F02] hover:underline">
+                0175 50 70 701
+              </a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span>✉️</span>
+              <a href="mailto:info@exclusiv-wohnen.com"
+                 class="text-[#D95F02] hover:underline break-all">
+                info@exclusiv-wohnen.com
+              </a>
+            </div>
+          </div>
+
+          <div class="company-card-actions flex gap-3">
+            <a href="tel:+491755070701"
+               class="flex-1 text-center bg-[#D95F02] text-white py-3 rounded-2xl text-sm font-medium hover:bg-[#B94E00] transition">
+              Anrufen
+            </a>
+
+            <a href="https://exclusiv-wohnen.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="flex-1 text-center border border-zinc-300 py-3 rounded-2xl text-sm font-medium text-zinc-700 hover:bg-zinc-100 transition">
+              Website
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="reveal soft-card company-card bg-white rounded-3xl overflow-hidden border border-zinc-100 flex flex-col h-full">
 
         <div class="relative aspect-video overflow-hidden media-zoom">
           <img src="IMG_2986.jpeg"
@@ -439,7 +530,7 @@
           </div>
         </div>
 
-        <div class="p-6 flex flex-col flex-1">
+        <div class="p-6 company-card-body">
 
           <h4 class="font-semibold text-2xl text-zinc-800 mb-3">
             AMI Hausmeister
@@ -455,11 +546,11 @@
             </span>
           </div>
 
-          <p class="text-zinc-600 text-sm leading-7 mb-6">
+          <p class="company-card-description text-zinc-600 text-sm leading-7 mb-6">
             Entrümpelungen, Haushaltsauflösungen, Kleintransporte und Hausmeisterservice in Hof und Umgebung.
           </p>
 
-          <div class="space-y-3 text-sm mb-6">
+          <div class="company-card-contact space-y-3 text-sm mb-6">
             <div class="flex items-center gap-3 text-zinc-700">
               <span>📍</span>
               <span>95028 Hof</span>
@@ -482,7 +573,7 @@
             </div>
           </div>
 
-          <div class="flex gap-3 mt-auto">
+          <div class="company-card-actions flex gap-3">
             <a href="tel:+4915203110437"
                class="flex-1 text-center bg-[#D95F02] text-white py-3 rounded-2xl text-sm font-medium hover:bg-[#B94E00] transition">
               Anrufen
